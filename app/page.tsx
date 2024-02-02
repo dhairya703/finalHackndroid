@@ -1,6 +1,7 @@
 import { About, Hero, Prizes, Registration } from "@/app/_components";
 import TextMarquee from "@/components/marquee";
 import SectionLayout from "@/layouts/section-layout";
+import Roadmap from "./_components/roadmap";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <SectionLayout>
         <Prizes />
         <Registration />
+        <Roadmap />
       </SectionLayout>
     </>
   );
