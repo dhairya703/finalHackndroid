@@ -1,6 +1,5 @@
-import { About, Hero } from "@/app/_components";
+import { About, Hero, Prizes, Registration } from "@/app/_components";
 import TextMarquee from "@/components/marquee";
-import Events from "./_components/events";
 import SectionLayout from "@/layouts/section-layout";
 
 export default function Home() {
@@ -8,27 +7,22 @@ export default function Home() {
     <>
       <SectionLayout>
         <Hero />
-      </SectionLayout>
-
-      <section className="bg-primary py-2 md:py-4">
-        <TextMarquee />
-      </section>
-
-      <SectionLayout explorable navigate="/about">
         <About />
       </SectionLayout>
 
-      <SectionLayout explorable>
-        <Events />
+      <section className="relative h-fit bg-secondary">
+        <div className="bg-tertiary py-2 md:py-4 h-full border-quarternary border border-x-0 border-t-0 transform -rotate-1 flex-shrink-0 z-20">
+          <TextMarquee mode="dark" />
+        </div>
+        <div className="absolute bottom-0 bg-primary py-2 md:py-4 w-full h-full border-quarternary border border-x-0 border-t-0 transform -rotate-2 flex-shrink-0 z-0">
+          <TextMarquee mode="dark" />
+        </div>
+      </section>
+
+      <SectionLayout>
+        <Prizes />
+        <Registration />
       </SectionLayout>
-
-      <section className="bg-tertiary py-2 md:py-4 border-quarternary border border-x-0 border-t-0">
-        <TextMarquee mode="dark" />
-      </section>
-
-      <section className="bg-primary py-2 md:py-4">
-        <TextMarquee type="secondary" />
-      </section>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 interface TextMarqueeProps {
@@ -16,17 +17,22 @@ const TextMarquee = ({
         type === "primary" ? (
           <p
             key={index}
-            className={clsx("font-primary flex gap-3 text-2xl md:text-3xl", {
-              "text-tertiary": mode === "light",
-              "text-primary": mode === "dark",
+            className={clsx("font-secondary flex gap-3 text-2xl md:text-3xl", {
+              "text-primary": mode === "light",
+              "text-dark": mode === "dark",
             })}
           >
-            <span className="ml-4">🌞</span>
-            <span>ͲechlςͲics</span>
-            <span className="font-secondary font-extrabold">&apos;24</span>
-            <span>✺</span>
-            <span>ͲechlςͲics</span>
-            <span className="font-secondary font-extrabold">&apos;24</span>
+            <Image
+              src="/icons/dot.svg"
+              width={8}
+              height={8}
+              alt="Dot"
+              priority
+              className="ml-3"
+            />
+
+            <span>designathon</span>
+            <span className="font-tertiary font-extrabold">&apos;24</span>
           </p>
         ) : (
           <p

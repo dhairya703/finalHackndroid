@@ -20,44 +20,30 @@ const SocialConnect = () => {
               priority
             />
           </CustomLink>
-          <Image
-            src="/icons/join.svg"
-            width={16}
-            height={16}
-            alt="Join Icon"
-            priority
-          />
-          <Image
-            src="/logos/advaya-logo.svg"
-            width={64}
-            height={64}
-            alt="Advaya Logo"
-            priority
-          />
         </div>
 
         {/* Right Section */}
         <div className="relative flex flex-wrap gap-4 md:gap-8 lg:w-1/2 justify-center items-center px-12 py-6 lg:p-12 z-0">
-          <p className="font-secondary text-secondary font-medium text-md lg:text-lg whitespace-nowrap">
+          <p className="font-secondary text-primary font-medium text-md lg:text-lg whitespace-nowrap">
             FOLLOW US
           </p>
 
           <div className="flex gap-6 z-[1]">
             <CustomLink
               href="https://www.instagram.com/techleticscce"
-              className="p-4 bg-secondary hover:bg-primary rounded-full"
+              className="p-4 bg-white hover:bg-tertiary rounded-full"
             >
               <SocialIcon logo="instagram" />
             </CustomLink>
             <CustomLink
               href="https://www.linkedin.com/school/christcollegeofengineering/"
-              className="p-4 bg-secondary hover:bg-primary rounded-full"
+              className="p-4 bg-white hover:bg-tertiary rounded-full"
             >
               <SocialIcon logo="linkedin" />
             </CustomLink>
             <CustomLink
               href="https://twitter.com/IedcE71858"
-              className="p-4 bg-secondary hover:bg-primary rounded-full"
+              className="p-4 bg-white hover:bg-tertiary rounded-full"
             >
               <SocialIcon logo="x" />
             </CustomLink>
@@ -80,11 +66,11 @@ const SocialConnect = () => {
 const Connect = () => {
   return (
     <SectionLayout>
-      <div className="flex flex-col justify-center gap-12 py-6 lg:py-12 bg-tertiary font-primary text-secondary">
+      <div className="flex flex-col justify-center gap-12 py-6 lg:py-12 bg-dark font-secondary text-white">
         <div className="flex gap-2 sm:gap-4 justify-between align-middle flex-wrap">
           <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] leading-tight tracking-wide lowercase flex flex-wrap">
             Want to&nbsp;
-            <span className="text-primary whitespace-nowrap">KNOW MORE?</span>
+            <span className="text-secondary whitespace-nowrap">KNOW MORE?</span>
             connect with us.
           </p>
 
@@ -112,7 +98,7 @@ const Connect = () => {
               />
               <CustomLink
                 href="https://cce.edu.in/"
-                className="font-secondary font-semibold text-xl md:text-2xl xl:text-3xl hover:text-primary"
+                className="font-tertiary font-semibold text-xl md:text-2xl xl:text-3xl hover:text-tertiary"
               >
                 cce.edu.in
               </CustomLink>
@@ -125,17 +111,17 @@ const Connect = () => {
                 alt="Arrow Icon"
                 priority
               />
-              <div className="flex font-secondary font-extrabold text-lg md:text-xl xl:text-2xl flex-wrap">
+              <div className="flex font-tertiary font-extrabold text-lg md:text-xl xl:text-2xl flex-wrap">
                 <CustomLink
                   href="/"
-                  className="whitespace-nowrap hover:text-primary"
+                  className="whitespace-nowrap hover:text-tertiary"
                 >
                   +91 1234567890
                 </CustomLink>
                 <p>,&nbsp;</p>
                 <CustomLink
                   href="/"
-                  className="whitespace-nowrap hover:text-primary"
+                  className="whitespace-nowrap hover:text-tertiary"
                 >
                   +91 9876543210
                 </CustomLink>

@@ -23,10 +23,10 @@ const CustomText: React.FC<CustomTextProps> = ({
   numeric = false,
 }) => {
   let className = numeric
-    ? "font-secondary font-extrabold "
+    ? "font-tertiary font-extrabold "
     : title || highlightedTitle
-    ? "font-primary "
-    : "font-secondary ";
+    ? "font-secondary "
+    : "font-tertiary ";
 
   className += description
     ? "font-regular "
@@ -36,16 +36,14 @@ const CustomText: React.FC<CustomTextProps> = ({
 
   if (title)
     className +=
-      "text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:max-w-[95%] xl:max-w-[80%] leading-tight tracking-wide lowercase flex flex-wrap text-secondary";
+      "text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:max-w-[95%] xl:max-w-[80%] leading-tight tracking-wide lowercase flex flex-wrap text-white text-right self-end";
   else if (highlightedTitle)
     className +=
-      "text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:max-w-[95%] xl:max-w-[80%] leading-tight tracking-wide lowercase flex flex-wrap text-primary whitespace-nowrap";
+      "text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:max-w-[95%] xl:max-w-[80%] leading-tight tracking-wide lowercase flex flex-wrap text-secondary whitespace-nowrap";
   else if (description)
-    className += "text-md md:text-xl lg:text-2xl text-justify text-secondary";
+    className += "text-md md:text-xl lg:text-2xl text-justify text-white";
   else if (highlightedDescription)
-    className += "text-md md:text-xl lg:text-2xl text-justify text-secondary";
-
-  console.log(className);
+    className += "text-md md:text-xl lg:text-2xl text-justify text-white";
 
   return <span className={className}>{children}</span>;
 };

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import { cakra, turretRoad } from "@/public/fonts";
+import { amberyGarden, cakra, turretRoad } from "@/public/fonts";
 import Copyright from "@/components/copyright";
 import { Connect, SocialConnect } from "@/components/connect";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${turretRoad.variable} ${cakra.variable} antialiased bg-dark`}
+        className={`${turretRoad.variable} ${cakra.variable} ${amberyGarden.variable} antialiased bg-dark overflow-x-hidden`}
       >
         {children}
 

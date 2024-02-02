@@ -8,7 +8,7 @@ const Hero = () => {
           <span className="text-center font-tertiary font-extrabold text-3xl text-white">
             28&nbsp;
             <span className="text-tertiary">&</span>
-            &nbsp;29&nbsp;FEB,&nbsp;
+            &nbsp;29 FEB,&nbsp;
             <span className="text-tertiary">2024</span>
           </span>
 

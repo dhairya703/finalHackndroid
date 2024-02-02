@@ -19,6 +19,7 @@ const config: Config = {
         secondary: "#CE4DF0",
         tertiary: "#FAED93",
         quarternary: "rgba(255, 255, 255, 0.2)",
+        gray: "rgba(255, 255, 255, 0.5)",
         white: "#FFFFFF",
         dark: "#030402",
       },
