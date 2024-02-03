@@ -1,7 +1,7 @@
 const Prizes = () => {
   return (
     <section className="flex flex-wrap justify-between gap-12 md:justify-between">
-      <div className="mx-auto flex w-fit min-w-72 flex-col items-center gap-1 xl:mx-0">
+      <div className="mx-auto flex flex-col items-center gap-1 xl:mx-0">
         <span className="font-secondary text-xl lowercase tracking-wider text-gray sm:text-2xl">
           Title&nbsp;
           <span className="text-white">Winner</span>

@@ -1,5 +1,5 @@
 import { About, Hero, Prizes, Registration, Roadmap } from "@/app/_components";
-import CollegeBanner from "@/components/college";
+import CollegeBanner from "@/components/college-banner";
 import TextMarquee from "@/components/marquee";
 import SectionLayout from "@/layouts/section-layout";
 
@@ -26,15 +26,18 @@ export default function Home() {
       </SectionLayout>
 
       <section className="relative">
-        <span className="absolute -top-8 right-1/4 z-10 rotate-12 font-secondary text-6xl md:text-7xl lowercase text-secondary">
+        <span className="absolute -top-8 right-1/4 z-10 rotate-12 font-secondary text-6xl lowercase text-secondary md:text-7xl">
           🌞
         </span>
 
         <SectionLayout full>
           <CollegeBanner />
-          <Roadmap />
         </SectionLayout>
       </section>
+
+      <SectionLayout>
+        <Roadmap />
+      </SectionLayout>
     </>
   );
 }

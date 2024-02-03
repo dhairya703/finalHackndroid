@@ -1,3 +1,4 @@
+import { CustomText } from "@/components/custom";
 import Image from "next/image";
 
 const Roadmap = () => {
@@ -29,39 +30,37 @@ const Roadmap = () => {
   ];
 
   return (
-    <div className="mb-[600px] h-96 w-full bg-dark px-4">
-      <div className="p-28">
-        <div>
-          <div className="py-4 font-secondary text-[58px] font-normal">
-            <span className="text-white">hackathon </span>
-            <span className="text-fuchsia-500">roadmap</span>
-          </div>
-        </div>
-        <div className="flex items-start justify-center gap-10">
-          <div className="grid grid-cols-3 grid-rows-2 gap-14 py-4">
-            {events.map((event, index) => (
-              <div key={index} className="flex flex-col gap-3">
-                <h3 className="font-secondary text-3xl text-primary">
-                  <span className="font-tertiary font-extrabold">
-                    {event.date.split(" ")[0] + " "}
-                  </span>
-                  {event.date.split(" ")[1]} {event.date.split(" ")[2]}
-                </h3>
-                <p className="font-tertiary text-lg text-white">
-                  <span className="font-bold">{event.description}</span>
-                </p>
-              </div>
-            ))}
-          </div>
+    <div className="relative flex flex-col justify-start gap-4 bg-dark font-secondary text-secondary">
+      <CustomText title>
+        what is&nbsp;
+        <CustomText highlightedTitle>designathon</CustomText>?
+      </CustomText>
 
-          <Image
-            className="mt-20"
-            width={250}
-            height={128}
-            src="/images/roadmap.webp"
-            alt="roadmap"
-          />
+      <div className="flex items-start justify-center gap-6">
+        <div className="z-10 grid grid-cols-1 grid-rows-6 gap-12 py-6 sm:grid-cols-2 sm:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2">
+          {events.map((event, index) => (
+            <div key={index} className="flex flex-col gap-3">
+              <span className="font-secondary text-3xl text-primary">
+                <span className="font-tertiary font-extrabold">
+                  {event.date.split(" ")[0] + " "}
+                </span>
+                {event.date.split(" ")[1]}
+              </span>
+
+              <span className="font-tertiary text-lg font-medium text-white">
+                {event.description}
+              </span>
+            </div>
+          ))}
         </div>
+
+        <Image
+          width={250}
+          height={128}
+          src="/images/roadmap.webp"
+          alt="roadmap"
+          className="absolute left-[60%] top-1/2 -z-0 my-auto w-44 opacity-30 sm:left-1/4 sm:top-1/3 lg:static lg:w-52 lg:opacity-100"
+        />
       </div>
     </div>
   );
