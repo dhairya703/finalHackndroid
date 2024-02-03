@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const CollegeBanner = () => {
   return (
-    <div className="relative mb-2 h-full w-full">
+    <div className="relative h-full w-full">
       <div className="h-full min-h-60 w-full">
         <Image
           src="/images/college.webp"

@@ -57,7 +57,7 @@ const Roadmap = () => {
         <Image
           width={250}
           height={128}
-          src="/images/roadmap.webp"
+          src="/images/apostrophe.webp"
           alt="roadmap"
           className="absolute left-[60%] top-1/2 -z-0 my-auto w-44 opacity-30 sm:left-1/4 sm:top-1/3 lg:static lg:w-52 lg:opacity-100"
         />
