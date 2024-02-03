@@ -6,7 +6,7 @@ import Roadmap from "./_components/roadmap";
 export default function Home() {
   return (
     <>
-      <SectionLayout full>
+      <SectionLayout full gapless>
         <Hero />
         <About />
       </SectionLayout>

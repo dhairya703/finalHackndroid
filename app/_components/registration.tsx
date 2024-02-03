@@ -3,44 +3,34 @@ import Link from "next/link";
 
 const Registration = () => {
   return (
-    <section className="flex justify-between items-center mt-16 -ml-16 mr-16">
+    <section className="flex flex-wrap items-center justify-between gap-6">
       <Image
         src="/images/cube.webp"
         alt="Cube Image"
-        width={766}
-        height={560}
+        width={1313}
+        height={960}
         priority
-        className="mt-24 z-10"
+        className="z-10 w-full max-w-xl"
       />
 
-      <div className="flex flex-col gap-6 items-center">
-        <div className="flex flex-col gap-1">
-          <span className="font-secondary text-4xl lowercase tracking-wider text-white">
-            Application closes on&nbsp;
+      <div className="flex flex-col gap-6 sm:ml-auto">
+        <div className="flex flex-col justify-center gap-1">
+          <span className="flex flex-wrap font-secondary text-3xl lowercase tracking-wider text-white sm:text-4xl">
+            Application&nbsp;
+            <span className="whitespace-nowrap">closes on&nbsp;</span>
           </span>
-          <span className="font-tertiary font-extrabold text-6xl tracking-wider text-secondary">
-            FEB 20,&nbsp;<span className="text-primary">2024</span>
+          <span className="flex flex-wrap font-tertiary text-5xl font-extrabold tracking-wider text-secondary sm:text-6xl">
+            <span className="whitespace-nowrap">FEB 20,&nbsp;</span>
+            <span className="text-primary">2024</span>
           </span>
         </div>
-        <Link href="\" className="w-fit">
-          <div className="bg-white px-6 py-2 font-semibold rounded-lg">
+
+        <Link href="\" className="sm:ml-auto w-fit">
+          <div className="rounded-lg bg-white px-6 py-2 font-semibold">
             <span className="text-dark">Apply with devfolio</span>
           </div>
         </Link>
       </div>
-
-      {/* <span className="absolute top-28 flex flex-col font-secondary lowercase text-9xl text-transparent tracking-wider text-left text-stroke-secondary opacity-20 z-0">
-        <span className="whitespace-nowrap text-stroke-primary">
-          BIGGER<span>.&nbsp;</span>
-        </span>
-        <span className="whitespace-nowrap text-stroke-secondary">
-          GRANDER
-          <span>.&nbsp;</span>
-        </span>
-        <span className="whitespace-nowrap text-stroke-tertiary">
-          WILDER<span>.&nbsp;</span>
-        </span>
-      </span> */}
     </section>
   );
 };
