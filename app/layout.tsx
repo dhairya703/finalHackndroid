@@ -22,7 +22,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${turretRoad.variable} ${cakra.variable} ${amberyGarden.variable} antialiased bg-dark overflow-x-hidden`}
+        className={`${turretRoad.variable} ${cakra.variable} ${amberyGarden.variable} antialiased bg-dark overflow-x-clip`}
       >
         {children}
 
@@ -31,6 +31,8 @@ export default function RootLayout({
           <SocialConnect />
           <Copyright />
         </footer>
+
+        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
       </body>
     </html>
   );

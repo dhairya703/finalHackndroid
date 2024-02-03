@@ -2,16 +2,15 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex justify-between px-20 items-center h-screen overflow-hidden bg-dark">
-      <div className="flex flex-col gap-12">
-        <div className="flex flex-col justify-center items-center">
-          <span className="text-center font-tertiary font-extrabold text-3xl text-white">
+    <div className="flex h-screen flex-col items-center justify-evenly gap-4 overflow-hidden bg-dark md:flex-row md:justify-center md:gap-0 md:px-4 lg:justify-center lg:gap-[6%] lg:px-12 xl:gap-[10%]">
+      <div className="-mb-[120px] flex origin-top scale-75 transform flex-col items-center justify-center gap-12 md:-ml-10 lg:my-auto lg:-ml-4 lg:origin-center xl:ml-0 xl:scale-100">
+        <div className="flex flex-col">
+          <span className="text-center font-tertiary text-3xl font-extrabold text-white">
             28&nbsp;
             <span className="text-tertiary">&</span>
             &nbsp;29 FEB,&nbsp;
             <span className="text-tertiary">2024</span>
           </span>
-
           <Image
             src="/logos/hero-logo.svg"
             width={360}
@@ -20,28 +19,26 @@ const Hero = () => {
             priority
             className="-my-2"
           />
-          <span className="text-center font-secondary lowercase text-2xl text-primary tracking-wider">
+          <span className="text-center font-secondary text-2xl lowercase tracking-wider text-primary">
             BIGGER<span className="text-secondary">.&nbsp;</span>GRANDER
             <span className="text-secondary">.&nbsp;</span>WILDER
             <span className="text-secondary">.</span>
           </span>
         </div>
-
-        <div className="flex justify-evenly flex-wrap gap-4">
+        <div className="flex flex-wrap justify-evenly gap-4">
           <div className="flex flex-col px-2 text-center">
-            <p className="font-tertiary text-tertiary text-6xl font-extrabold">
+            <p className="font-tertiary text-6xl font-extrabold text-tertiary">
               12
             </p>
-            <p className="text-white font-secondary text-xl md:text-2xl lowercase">
+            <p className="font-secondary text-xl lowercase text-white md:text-2xl">
               Hours
             </p>
           </div>
-
           <div className="flex flex-col px-2 text-center">
-            <p className="font-tertiary text-tertiary text-6xl font-extrabold">
+            <p className="font-tertiary text-6xl font-extrabold text-tertiary">
               20k
             </p>
-            <p className="text-white font-secondary text-xl md:text-2xl lowercase">
+            <p className="font-secondary text-xl lowercase text-white md:text-2xl">
               Prizepool
             </p>
           </div>
@@ -49,12 +46,12 @@ const Hero = () => {
       </div>
 
       <Image
-        src="/images/hero-img.svg"
+        src="/images/hero-img.webp"
         width={698}
         height={640}
         alt="Designathon Image"
         priority
-        className=""
+        className="h-auto w-full max-w-96 px-2 md:w-[50%] md:max-w-none xl:w-[60%] xl:max-w-[750px]"
       />
     </div>
   );

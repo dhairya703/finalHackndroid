@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Registration = () => {
   return (
@@ -12,13 +13,20 @@ const Registration = () => {
         className="mt-24 z-10"
       />
 
-      <div className="flex flex-col gap-1">
-        <span className="font-secondary text-4xl lowercase tracking-wider text-white">
-          Application closes on&nbsp;
-        </span>
-        <span className="font-tertiary font-extrabold text-6xl tracking-wider text-secondary">
-          FEB 20,&nbsp;<span className="text-primary">2024</span>
-        </span>
+      <div className="flex flex-col gap-6 items-center">
+        <div className="flex flex-col gap-1">
+          <span className="font-secondary text-4xl lowercase tracking-wider text-white">
+            Application closes on&nbsp;
+          </span>
+          <span className="font-tertiary font-extrabold text-6xl tracking-wider text-secondary">
+            FEB 20,&nbsp;<span className="text-primary">2024</span>
+          </span>
+        </div>
+        <Link href="\" className="w-fit">
+          <div className="bg-white px-6 py-2 font-semibold rounded-lg">
+            <span className="text-dark">Apply with devfolio</span>
+          </div>
+        </Link>
       </div>
 
       {/* <span className="absolute top-28 flex flex-col font-secondary lowercase text-9xl text-transparent tracking-wider text-left text-stroke-secondary opacity-20 z-0">

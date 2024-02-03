@@ -25,7 +25,7 @@ const SectionLayout = ({
   return (
     <div
       className={clsx(
-        "px-6 sm:px-12 bg-dark border border-x-0 border-t-0 border-quarternary",
+        "overflow-clip px-6 sm:px-12 bg-dark border border-x-0 border-t-0 border-quarternary",
         {
           "z-10 fixed top-0 left-0 right-0": float,
         }

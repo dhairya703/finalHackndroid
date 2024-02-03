@@ -1,9 +1,8 @@
 import { CustomText } from "@/components/custom";
-import { TechleticsLogo } from "@/components/svg/logos";
 
 const About = () => {
   return (
-    <div className="flex flex-col text-right gap-12 px-24 py-6 lg:py-12 bg-dark font-secondary text-secondary">
+    <div className="flex flex-col gap-12 bg-dark px-24 py-6 text-right font-secondary text-secondary lg:py-12">
       <CustomText title>
         what is&nbsp;
         <CustomText highlightedTitle>designathon</CustomText>?
