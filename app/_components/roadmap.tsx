@@ -27,34 +27,17 @@ const Roadmap = () => {
       description: "DESIGNATHON ‘24 ends and valedictory ceremony.",
     },
   ];
+
   return (
-    <div className="h-96 mb-[600px] bg-dark px-4 w-full">
-      <div
-        className="bg-cover w-full h-full bg-black"
-        style={{
-          backgroundImage: "url('/images/college.png')",
-        }}
-      >
-        <div className="h-full flex items-center justify-center text-center font-normal font-secondary">
-          <div>
-            <div className="text-primary text-5xl pb-4">hackathon venue</div>
-            <div className="text-white text-6xl pb-2">
-              christ college of engineering
-            </div>
-            <div className="text-neutral-400 text-4xl">
-              irinjalakuda, thrissur, kerala
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="mb-[600px] h-96 w-full bg-dark px-4">
       <div className="p-28">
         <div>
-          <div className="font-secondary py-4 text-[58px] font-normal">
+          <div className="py-4 font-secondary text-[58px] font-normal">
             <span className="text-white">hackathon </span>
             <span className="text-fuchsia-500">roadmap</span>
           </div>
         </div>
-        <div className="flex justify-center items-start gap-10">
+        <div className="flex items-start justify-center gap-10">
           <div className="grid grid-cols-3 grid-rows-2 gap-14 py-4">
             {events.map((event, index) => (
               <div key={index} className="flex flex-col gap-3">
@@ -64,7 +47,7 @@ const Roadmap = () => {
                   </span>
                   {event.date.split(" ")[1]} {event.date.split(" ")[2]}
                 </h3>
-                <p className="font-tertiary text-white text-lg">
+                <p className="font-tertiary text-lg text-white">
                   <span className="font-bold">{event.description}</span>
                 </p>
               </div>

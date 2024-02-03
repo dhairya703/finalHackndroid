@@ -1,7 +1,7 @@
-import { About, Hero, Prizes, Registration } from "@/app/_components";
+import { About, Hero, Prizes, Registration, Roadmap } from "@/app/_components";
+import CollegeBanner from "@/components/college";
 import TextMarquee from "@/components/marquee";
 import SectionLayout from "@/layouts/section-layout";
-import Roadmap from "./_components/roadmap";
 
 export default function Home() {
   return (
@@ -23,8 +23,18 @@ export default function Home() {
       <SectionLayout>
         <Prizes />
         <Registration />
-        <Roadmap />
       </SectionLayout>
+
+      <section className="relative">
+        <span className="absolute -top-8 right-1/4 z-10 rotate-12 font-secondary text-6xl md:text-7xl lowercase text-secondary">
+          🌞
+        </span>
+
+        <SectionLayout full>
+          <CollegeBanner />
+          <Roadmap />
+        </SectionLayout>
+      </section>
     </>
   );
 }
