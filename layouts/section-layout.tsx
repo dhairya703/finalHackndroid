@@ -12,6 +12,7 @@ interface SectionProps {
   explorable?: boolean;
   navigate?: string;
   noanimation?: boolean;
+  gapless?: boolean;
 }
 
 const SectionLayout = ({
@@ -21,20 +22,22 @@ const SectionLayout = ({
   explorable = false,
   navigate = "",
   noanimation = true,
+  gapless = false,
 }: SectionProps) => {
   return (
     <div
       className={clsx(
-        "overflow-clip px-6 sm:px-12 bg-dark border border-x-0 border-t-0 border-quarternary",
+        "overflow-clip border border-x-0 border-t-0 border-quarternary bg-dark px-6 sm:px-12",
         {
-          "z-10 fixed top-0 left-0 right-0": float,
-        }
+          "fixed left-0 right-0 top-0 z-10": float,
+        },
       )}
     >
       <div
-        className={clsx("relative border-quarternary border border-y-0", {
-          "px-4 py-2 sm:px-8 sm:py-4 lg:px-16 lg:py-9": !full,
-          "pb-10": explorable,
+        className={clsx("relative border border-y-0 border-quarternary", {
+          "px-6 py-12 sm:px-12 sm:py-20 lg:px-16 lg:py-24 xl:px-32 xl:py-32 2xl:px-48":
+            !full,
+          "pb-12": explorable,
         })}
       >
         <AnimatedSectionLayout
@@ -47,7 +50,9 @@ const SectionLayout = ({
             duration: 0.5,
           }}
         >
-          {children}
+          <div className={clsx({ "flex flex-col gap-24": !gapless })}>
+            {children}
+          </div>
         </AnimatedSectionLayout>
       </div>
     </div>

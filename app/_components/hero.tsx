@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-evenly gap-4 overflow-hidden bg-dark md:flex-row md:justify-center md:gap-0 md:px-4 lg:justify-center lg:gap-[6%] lg:px-12 xl:gap-[10%]">
+    <div className="flex h-screen flex-col items-center justify-evenly gap-4 overflow-hidden bg-dark md:flex-row md:justify-center md:gap-0 md:px-4 lg:justify-center lg:gap-[6%] lg:px-16 xl:gap-[10%]">
       <div className="-mb-[120px] flex origin-top scale-75 transform flex-col items-center justify-center gap-12 md:-ml-10 lg:my-auto lg:-ml-4 lg:origin-center xl:ml-0 xl:scale-100">
         <div className="flex flex-col">
           <span className="text-center font-tertiary text-3xl font-extrabold text-white">
@@ -47,11 +47,11 @@ const Hero = () => {
 
       <Image
         src="/images/hero-img.webp"
-        width={698}
-        height={640}
+        width={1047}
+        height={960}
         alt="Designathon Image"
         priority
-        className="h-auto w-full max-w-96 px-2 md:w-[50%] md:max-w-none xl:w-[60%] xl:max-w-[750px]"
+        className="h-auto w-full max-w-96 px-2 md:w-[50%] md:max-w-none xl:w-[60%] xl:max-w-[960px]"
       />
     </div>
   );

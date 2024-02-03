@@ -2,7 +2,7 @@ import { CustomText } from "@/components/custom";
 
 const About = () => {
   return (
-    <div className="flex flex-col gap-12 bg-dark px-24 py-6 text-right font-secondary text-secondary lg:py-12">
+    <div className="flex flex-col gap-4 bg-dark px-6 pb-12 text-right font-secondary text-secondary sm:px-12 md:pb-16 lg:px-16 lg:pb-24 xl:px-32 2xl:px-48">
       <CustomText title>
         what is&nbsp;
         <CustomText highlightedTitle>designathon</CustomText>?
