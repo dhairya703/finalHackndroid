@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-
+import Script from "next/script";
 const Registration = () => {
   return (
     <section className="flex flex-wrap items-center justify-between gap-6">
@@ -25,11 +24,12 @@ const Registration = () => {
           </span>
         </div>
 
-        <Link href="\" className="sm:ml-auto w-fit">
-          <div className="rounded-lg bg-white px-6 py-2 font-semibold">
-            <span className="text-dark">Apply with devfolio</span>
-          </div>
-        </Link>
+        <Script defer async src="https://apply.devfolio.co/v2/sdk.js" strategy="beforeInteractive" />
+        <div
+            className="apply-button"
+            data-hackathon-slug="designathon24"
+            data-button-theme="dark-inverted"
+            style={{ height: "44px", width: "312px" }}></div>
       </div>
     </section>
   );
