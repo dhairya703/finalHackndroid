@@ -30,16 +30,19 @@ const Roadmap = () => {
   ];
 
   return (
-    <div className="relative flex flex-col justify-start gap-4 bg-dark font-secondary text-secondary">
+    <div className="relative flex flex-col justify-start gap-4 font-secondary text-secondary">
       <CustomText title>
-        hackathon <CustomText highlightedTitle>roadmap</CustomText>?
+        hackathon&nbsp;<CustomText highlightedTitle>roadmap</CustomText>?
       </CustomText>
 
       <div className="flex items-start justify-center gap-6">
-        <div className="z-10 grid grid-cols-1 grid-rows-6 gap-12 py-6 sm:grid-cols-2 sm:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2">
+        <div
+          className="z-10 grid-cols-1 grid-rows-6 gap-12 py-6 sm:grid-cols-2 sm:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2"
+          style={{ display: "grid" }}
+        >
           {events.map((event, index) => (
             <div key={index} className="flex flex-col gap-3">
-              <span className="font-secondary text-3xl text-primary">
+              <span className="font-secondary text-2xl text-primary sm:text-3xl">
                 <span className="font-tertiary font-extrabold">
                   {event.date.split(" ")[0] + " "}
                 </span>

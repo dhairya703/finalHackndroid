@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Script from "next/script";
+
 const Registration = () => {
   return (
     <div className="flex flex-wrap items-center justify-between gap-6">

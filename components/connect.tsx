@@ -66,7 +66,7 @@ const SocialConnect = () => {
 const Connect = () => {
   return (
     <SectionLayout>
-      <div className="flex flex-col justify-center gap-12 py-6 lg:py-12 bg-dark font-secondary text-white">
+      <div className="flex flex-col justify-center gap-12 py-6 lg:py-12 font-secondary text-white">
         <div className="flex gap-2 sm:gap-4 justify-between align-middle flex-wrap">
           <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] leading-tight tracking-wide lowercase flex flex-wrap">
             Want to&nbsp;
