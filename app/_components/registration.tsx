@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 import Script from "next/script";
 const Registration = () => {
   return (
-    <section className="flex flex-wrap items-center justify-between gap-6">
+    <div className="flex flex-wrap items-center justify-between gap-6">
       <Image
         src="/images/cube.webp"
         alt="Cube Image"
@@ -24,14 +25,15 @@ const Registration = () => {
           </span>
         </div>
 
-        <Script defer async src="https://apply.devfolio.co/v2/sdk.js" strategy="beforeInteractive" />
+        <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
         <div
-            className="apply-button"
-            data-hackathon-slug="designathon24"
-            data-button-theme="dark-inverted"
-            style={{ height: "44px", width: "312px" }}></div>
+          className="apply-button"
+          data-hackathon-slug="designathon24"
+          data-button-theme="dark-inverted"
+          style={{ height: "44px", width: "312px" }}
+        ></div>
       </div>
-    </section>
+    </div>
   );
 };
 
