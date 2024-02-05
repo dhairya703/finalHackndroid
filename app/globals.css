@@ -58,6 +58,6 @@ body {
   }
 
   .text-stroke-white {
-    -webkit-text-stroke: 2px #ffffff;
+    -webkit-text-stroke: 1px #ffffff;
   }
 }

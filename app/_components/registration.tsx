@@ -4,28 +4,29 @@ import Script from "next/script";
 
 const Registration = () => {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-6">
+    <div className="flex flex-wrap items-center justify-between gap-6 pb-16 pt-48">
       <Image
         src="/images/cube.webp"
         alt="Cube Image"
         width={1313}
         height={960}
         priority
-        className="z-10 w-full max-w-xl"
+        className="absolute left-0 z-10 w-full max-w-3xl"
       />
-
       <div className="flex flex-col gap-6 sm:ml-auto">
+        <div className="rounded-xl bg-primary py-2 text-center font-secondary text-3xl text-dark">
+          REGISTER FOR FREE
+        </div>
         <div className="flex flex-col justify-center gap-1">
           <span className="flex flex-wrap font-secondary text-3xl lowercase tracking-wider text-white sm:text-4xl">
             Application&nbsp;
             <span className="whitespace-nowrap">closes on&nbsp;</span>
           </span>
-          <span className="flex flex-wrap font-tertiary text-5xl font-extrabold tracking-wider text-secondary sm:text-6xl">
+          <span className="flex flex-wrap font-tertiary text-5xl font-extrabold tracking-wider text-white sm:text-6xl">
             <span className="whitespace-nowrap">FEB 20,&nbsp;</span>
-            <span className="text-primary">2024</span>
+            <span>2024</span>
           </span>
         </div>
-
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
         <div
           className="apply-button"

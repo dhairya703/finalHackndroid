@@ -1,4 +1,11 @@
-import { About, Hero, Prizes, Registration, Roadmap } from "@/app/_components";
+import {
+  About,
+  Header,
+  Hero,
+  Prizes,
+  Registration,
+  Roadmap,
+} from "@/app/_components";
 import CollegeBanner from "@/components/college-banner";
 import TextMarquee from "@/components/marquee";
 import SectionLayout from "@/layouts/section-layout";
@@ -7,6 +14,8 @@ import Sponsors from "./_components/sponsor";
 export default function Home() {
   return (
     <>
+      <Header />
+
       <SectionLayout full gapless>
         <Hero />
         <About />
