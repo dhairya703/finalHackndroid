@@ -1,11 +1,12 @@
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import DEVFOLIO from "@/public/sponsors/devfolio.png";
 import POLYGON from "@/public/sponsors/polygon.png";
 import REPLIT from "@/public/sponsors/replit.png";
 import SOLANA from "@/public/sponsors/solana.png";
 import FILECOIN from "@/public/sponsors/filecoin.png";
-import Link from "next/link";
 
 const Sponsors = () => {
   const sponsors = [

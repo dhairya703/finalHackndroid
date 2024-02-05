@@ -32,7 +32,7 @@ const Roadmap = () => {
   return (
     <div className="relative flex flex-col justify-start gap-4 font-secondary text-secondary">
       <CustomText title>
-        hackathon&nbsp;<CustomText highlightedTitle>roadmap</CustomText>?
+        hackathon&nbsp;<CustomText highlightedTitle>roadmap</CustomText>
       </CustomText>
 
       <div className="flex items-start justify-center gap-6">

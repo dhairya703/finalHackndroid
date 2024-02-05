@@ -5,7 +5,7 @@ const Copyright = () => {
     <div className="relative min-h-16 flex items-center justify-center overflow-clip">
       <div className="absolute mt-2 md:mt-8">
         <span className="text-stroke-secondary opacity-30 font-bold text-transparent lowercase font-secondary text-8xl md:text-9xl whitespace-nowrap tracking-widest leading-none align-middle">
-          ͲechlςͲics
+          designathon
         </span>
       </div>
       <div>

@@ -9,20 +9,17 @@ const About = () => {
       </CustomText>
 
       <CustomText description>
-        Join us for the&nbsp;
-        <CustomText highlightedDescription>third edition</CustomText>
-        &nbsp;of Techletics, the&nbsp;
+        An in-person action packed&nbsp;
+        <CustomText highlightedDescription>design hackathon&nbsp;</CustomText>
+        where students and aspiring designers are given a platform to experience
         <CustomText highlightedDescription>
-          techno-cultural festival of Christ College of Engineering.
+          &nbsp;real-life design problems
         </CustomText>
-        Explore, learn, and enjoy the latest innovations and trends in
-        technology and culture. Participate in workshops, competitions,
-        exhibitions, performances, and more. Win prizes and awards.&nbsp;
+        &nbsp;and master the art of creating&nbsp;
         <CustomText highlightedDescription>
-          Illuminate your mind, ignite your passion, and inspire your future.
+          usable, viable, and empathetic design solutions
         </CustomText>
-        Techletics &apos;24 is the ultimate rendezvous of innovation and zest.
-        Don&apos;t miss it.
+        &nbsp;while having a great deal of fun for 12 hours straight.
       </CustomText>
     </div>
   );

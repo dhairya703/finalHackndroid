@@ -38,6 +38,9 @@ export default function Home() {
 
       <SectionLayout>
         <Roadmap />
+      </SectionLayout>
+
+      <SectionLayout>
         <Sponsors />
       </SectionLayout>
     </>
