@@ -32,8 +32,8 @@ const Registration = () => {
 
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
 
-        <div className="w-full rounded-lg bg-white">
-          <div className="flex w-full scale-75 items-center justify-center sm:scale-100">
+        <div className="relative h-[44px] w-full rounded-lg bg-white">
+          <div className="absolute left-1 flex  origin-left scale-75 items-center justify-center sm:relative sm:w-full sm:origin-center sm:scale-100">
             <div
               className="apply-button"
               data-hackathon-slug="designathon24"
