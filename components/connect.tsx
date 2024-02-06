@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { SocialIcon } from "./svg/icons";
 import SectionLayout from "@/layouts/section-layout";
+import { CustomLink } from "@/components/custom";
 
 const SocialConnect = () => {
   return (
@@ -10,14 +11,48 @@ const SocialConnect = () => {
       <div className="flex flex-col overflow-clip lg:flex-row">
         {/* Left Section */}
         <div className="flex flex-col items-center justify-center gap-6 border-r border-transparent px-6 py-6 lg:w-1/2 lg:flex-row lg:border-quarternary lg:p-12">
+          <div className="flex gap-4">
+            <CustomLink href="https://cce.edu.in">
+              <Image
+                src="/logos/cce-logo.png"
+                width={280}
+                height={280}
+                alt="Christ College of Engineering Logo"
+                priority
+                className="h-20 w-auto"
+              />
+            </CustomLink>
+            <CustomLink href="https://cce.edu.in/department/associations/1">
+              <Image
+                src="/logos/code-logo.png"
+                width={280}
+                height={280}
+                alt="CODe Logo"
+                priority
+                className="h-20 w-auto"
+              />
+            </CustomLink>
+          </div>
+
+          <Image
+            src="/icons/join.svg"
+            width={280}
+            height={280}
+            alt="Connect Icon"
+            priority
+            className="h-6 w-auto"
+          />
+
+          <CustomLink href="https://techletics-24.vercel.app">
             <Image
-              src="/logos/association-logos.png"
-              width={1000}
+              src="/logos/techletics-logo.svg"
+              width={280}
               height={280}
-              alt="Association Logos"
+              alt="Techletics Logo"
               priority
-              className="h-16 w-auto sm:h-20"
+              className="h-20 w-auto"
             />
+          </CustomLink>
         </div>
 
         {/* Right Section */}
@@ -29,19 +64,19 @@ const SocialConnect = () => {
           <div className="flex gap-6">
             <CustomLink
               href="https://www.instagram.com/code_cce/"
-              className="rounded-full bg-white p-3 hover:bg-tertiary"
+              className="rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="instagram" />
             </CustomLink>
             <CustomLink
               href="https://www.linkedin.com/company/code-design-week/"
-              className="rounded-full bg-white p-3 hover:bg-tertiary"
+              className="rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="linkedin" />
             </CustomLink>
             <CustomLink
               href="https://www.facebook.com/CODe.cce/"
-              className="rounded-full bg-white p-3 hover:bg-tertiary"
+              className="rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="facebook" />
             </CustomLink>
