@@ -15,7 +15,7 @@ const Registration = () => {
       />
 
       <div className="z-10 flex min-w-fit flex-col gap-6 sm:ml-auto">
-        <div className="w-fit rounded-lg bg-primary px-6 sm:px-0 sm:w-full py-2 text-center font-secondary text-lg sm:text-xl md:text-2xl text-dark xl:text-3xl">
+        <div className="w-fit rounded-lg bg-primary px-6 py-2 text-center font-secondary text-lg text-dark sm:w-full sm:px-0 sm:text-xl md:text-2xl xl:text-3xl">
           REGISTER FOR FREE
         </div>
         <div className="flex flex-col justify-center gap-1">
@@ -30,7 +30,7 @@ const Registration = () => {
         </div>
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
         <div
-          className="apply-button"
+          className="apply-button mr-auto scale-75 sm:mx-auto sm:scale-100 origin-left"
           data-hackathon-slug="designathon24"
           data-button-theme="dark-inverted"
           style={{ height: "44px", width: "312px" }}
