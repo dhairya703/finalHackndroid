@@ -32,12 +32,14 @@ const Registration = () => {
 
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
 
-        <div
-          className="apply-button"
-          data-hackathon-slug="designathon24"
-          data-button-theme="dark-inverted"
-          style={{ height: "44px", width: "100%" }}
-        ></div>
+        <div className="w-full flex items-center">
+          <div
+            className="apply-button"
+            data-hackathon-slug="designathon24"
+            data-button-theme="dark-inverted"
+            style={{ height: "44px" }}
+          ></div>
+        </div>
       </div>
     </div>
   );
