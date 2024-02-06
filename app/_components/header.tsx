@@ -4,7 +4,7 @@ interface HeaderProps {
 
 const Header = ({ type = "primary" }: HeaderProps) => {
   return type === "primary" ? (
-    <div className="text-stroke-white flex h-12 justify-center overflow-clip border-b border-quarternary font-primary text-[19vw] leading-none text-transparent sm:h-16 md:h-20 xl:h-24">
+    <div className="text-stroke-white flex h-12 justify-center overflow-clip border-b border-quarternary font-primary text-[19vw] leading-none text-transparent sm:h-16 md:h-20 xl:h-24 absolute bg-dark z-10">
       <span className="relative top-0 opacity-30 xl:-top-8">DESIGNATHON</span>
     </div>
   ) : (

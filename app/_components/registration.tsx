@@ -1,10 +1,11 @@
 "use client";
+
 import Image from "next/image";
 import Script from "next/script";
 
 const Registration = () => {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-6 pb-6 pt-48">
+    <div className="flex flex-wrap items-center justify-between gap-6 pb-6 pt-0 sm:pt-12 md:pt-24 xl:pt-48">
       <Image
         src="/images/cube.webp"
         alt="Cube Image"
@@ -14,8 +15,8 @@ const Registration = () => {
         className="relative left-0 z-10 w-full max-w-3xl 2xl:absolute"
       />
 
-      <div className="z-10 flex min-w-fit items-center flex-col gap-6 sm:ml-auto">
-        <div className="w-full rounded-xl bg-primary py-2 text-center font-secondary text-3xl text-dark">
+      <div className="z-10 flex min-w-fit flex-col gap-6 sm:ml-auto">
+        <div className="w-fit rounded-lg bg-primary px-6 py-2 text-center font-secondary text-lg text-dark sm:w-full sm:px-0 sm:text-xl md:text-2xl xl:text-3xl">
           REGISTER FOR FREE
         </div>
         <div className="flex flex-col justify-center gap-1">
@@ -30,7 +31,7 @@ const Registration = () => {
         </div>
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
         <div
-          className="apply-button"
+          className="apply-button mr-auto origin-left scale-75 sm:mx-auto sm:scale-100"
           data-hackathon-slug="designathon24"
           data-button-theme="dark-inverted"
           style={{ height: "44px", width: "312px" }}

@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
         </div>
         <Image
-          src="/images/hero.png"
+          src="/images/hero-img.png"
           width={1047}
           height={960}
           alt="Designathon Image"
