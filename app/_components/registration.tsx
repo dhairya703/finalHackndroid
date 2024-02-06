@@ -15,16 +15,16 @@ const Registration = () => {
         className="relative left-0 z-10 w-full max-w-3xl 2xl:absolute"
       />
 
-      <div className="z-10 flex min-w-fit flex-col gap-6 sm:ml-auto">
-        <div className="w-fit rounded-lg bg-primary px-6 py-2 text-center font-secondary text-lg text-dark sm:w-full sm:px-0 sm:text-xl md:text-2xl xl:text-3xl">
+      <div className="z-10 ml-auto flex min-w-full flex-col  gap-6">
+        <div className="w-full rounded-lg bg-primary px-6 py-2 text-center font-secondary text-lg text-dark sm:px-0 sm:text-xl md:text-2xl xl:text-3xl">
           REGISTER FOR FREE
         </div>
-        <div className="flex flex-col justify-center gap-1">
-          <span className="flex flex-wrap font-secondary text-3xl lowercase tracking-wider text-white sm:text-4xl">
+        <div className="flex items-center flex-col justify-center gap-1">
+          <span className="flex flex-wrap font-secondary text-xl lowercase tracking-wider text-white sm:text-4xl">
             Application&nbsp;
             <span className="whitespace-nowrap">closes on&nbsp;</span>
           </span>
-          <span className="flex flex-wrap font-tertiary text-5xl font-extrabold tracking-wider text-white sm:text-6xl">
+          <span className="flex flex-wrap font-tertiary text-3xl font-extrabold tracking-wider text-white sm:text-6xl">
             <span className="whitespace-nowrap">FEB 20,&nbsp;</span>
             <span>2024</span>
           </span>
