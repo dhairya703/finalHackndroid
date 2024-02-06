@@ -11,6 +11,7 @@ import TextMarquee from "@/components/marquee";
 import SectionLayout from "@/layouts/section-layout";
 import Sponsors from "./_components/sponsor";
 import Gallery from "./_components/gallery";
+import Faq from "./_components/faq";
 
 export default function Home() {
   return (
@@ -50,7 +51,13 @@ export default function Home() {
         <Roadmap />
       </SectionLayout>
 
+      <SectionLayout full>
         <Gallery />
+      </SectionLayout>
+
+      <SectionLayout>
+        <Faq />
+      </SectionLayout>
 
       <SectionLayout>
         <Sponsors />

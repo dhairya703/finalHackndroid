@@ -13,7 +13,7 @@ const Registration = () => {
         priority
         className="absolute left-0 z-10 w-full max-w-3xl"
       />
-      <div className="flex flex-col gap-6 sm:ml-auto">
+      <div className="z-50 flex flex-col gap-6 sm:ml-auto">
         <div className="rounded-xl bg-primary py-2 text-center font-secondary text-3xl text-dark">
           REGISTER FOR FREE
         </div>

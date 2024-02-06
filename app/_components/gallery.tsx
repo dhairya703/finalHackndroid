@@ -1,17 +1,16 @@
-import { CustomText } from "@/components/custom";
 import Marquee from "react-fast-marquee";
-import First from "@/public/gallery/1.png";
 import Second from "@/public/gallery/2.png";
 import Third from "@/public/gallery/3.png";
 import Fourth from "@/public/gallery/4.png";
 import Fifth from "@/public/gallery/5.png";
 import Sixth from "@/public/gallery/6.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Gallery = () => {
   const images = [
     {
-      src: First,
+      src: Third,
       alt: "1",
     },
     {
@@ -37,15 +36,16 @@ const Gallery = () => {
   ];
   return (
     <div className="z-40 flex flex-col items-center justify-center py-10">
-      <div className="text-normal py-10 text-center font-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <div className="text-normal px-4 pb-4 pt-12 text-center font-secondary text-3xl sm:px-12 sm:pt-20 sm:text-4xl md:text-5xl lg:px-16 lg:pt-24 lg:text-6xl xl:px-32 xl:pt-32 2xl:px-48">
         glipmse into the&nbsp;
-        <span className="text-secondary">memories&nbsp;</span>we have created
+        <span className="text-tertiary">memories&nbsp;</span>we{" "}
+        <span className="whitespace-nowrap">have created</span>
       </div>
-      <Marquee pauseOnHover className="p-10">
+      <Marquee pauseOnHover className="z-0 p-10">
         {images.map((image, index) => (
-          <div className="-ml-14" key={index}>
+          <div className="z-0 -ml-14 hover:z-10" key={index}>
             <Image
-              className="object-contain grayscale transition-all duration-200 ease-in hover:scale-105 hover:grayscale-0"
+              className="object-contain brightness-50 grayscale transition-all duration-200 ease-in hover:translate-x-[-20%] hover:scale-125 hover:brightness-100 hover:grayscale-0"
               src={image.src}
               alt={image.alt}
               height={200}
@@ -55,7 +55,13 @@ const Gallery = () => {
       </Marquee>
       <p className="font-tertiary text-sm font-semibold opacity-50 sm:text-lg">
         The Previous Edition of{" "}
-        <span className="underline">DESIGNATHON by CODe</span>
+        <Link
+          href="https://codedesignweek.netlify.app/designathon"
+          className="underline"
+          target="_blank"
+        >
+          DESIGNATHON by CODe
+        </Link>
       </p>
     </div>
   );
