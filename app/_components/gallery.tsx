@@ -33,6 +33,10 @@ const Gallery = () => {
       src: Sixth,
       alt: "6",
     },
+    {
+      src: Fourth,
+      alt: "7",
+    },
   ];
   return (
     <div className="z-40 flex flex-col items-center justify-center py-10">

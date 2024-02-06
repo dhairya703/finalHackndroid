@@ -54,9 +54,9 @@ const Faq = () => {
         />
         <div className="w-full xl:w-1/2">
           {questions.map((item, index) => (
-            <div className="ml-auto w-5/6" key={index}>
+            <div className="ml-auto w-5/6 py-3" key={index}>
               <div
-                className={`cursor-pointer py-2 text-right font-secondary text-2xl lowercase sm:text-3xl ${expandedIndex === index ? " text-primary" : " text-white hover:text-tertiary"}`}
+                className={`cursor-pointer text-right font-secondary text-2xl lowercase sm:text-3xl ${expandedIndex === index ? " text-primary" : " text-white hover:text-tertiary"}`}
                 onClick={() => handleQuestionClick(index)}
               >
                 {item.question}

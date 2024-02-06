@@ -4,16 +4,17 @@ import Script from "next/script";
 
 const Registration = () => {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-6 pb-16 pt-48">
+    <div className="flex flex-wrap items-center justify-between gap-6 pb-6 pt-48">
       <Image
         src="/images/cube.webp"
         alt="Cube Image"
         width={1313}
         height={960}
         priority
-        className="absolute left-0 z-10 w-full max-w-3xl"
+        className="relative left-0 z-10 w-full max-w-3xl 2xl:absolute"
       />
-      <div className="z-50 flex flex-col gap-6 sm:ml-auto">
+
+      <div className="z-10 flex min-w-fit flex-col gap-6 sm:ml-auto">
         <div className="rounded-xl bg-primary py-2 text-center font-secondary text-3xl text-dark">
           REGISTER FOR FREE
         </div>
