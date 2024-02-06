@@ -4,7 +4,7 @@ import Script from "next/script";
 
 const Registration = () => {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-6 pb-6 pt-48">
+    <div className="flex flex-wrap items-center justify-between gap-6 pb-6 pt-0 sm:pt-12 md:pt-24 xl:pt-48">
       <Image
         src="/images/cube.webp"
         alt="Cube Image"
@@ -15,7 +15,7 @@ const Registration = () => {
       />
 
       <div className="z-10 flex min-w-fit flex-col gap-6 sm:ml-auto">
-        <div className="rounded-xl bg-primary py-2 text-center font-secondary text-3xl text-dark">
+        <div className="w-fit rounded-lg bg-primary px-6 sm:px-0 sm:w-full py-2 text-center font-secondary text-lg sm:text-xl md:text-2xl text-dark xl:text-3xl">
           REGISTER FOR FREE
         </div>
         <div className="flex flex-col justify-center gap-1">

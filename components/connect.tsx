@@ -10,7 +10,7 @@ const SocialConnect = () => {
     <SectionLayout full>
       <div className="flex flex-col overflow-clip lg:flex-row">
         {/* Left Section */}
-        <div className="flex flex-col items-center justify-center gap-6 border-r border-transparent px-6 py-6 lg:w-1/2 lg:flex-row lg:border-quarternary lg:p-12">
+        <div className="z-10 flex flex-col items-center justify-center gap-6 border-r border-transparent px-6 py-6 lg:w-1/2 lg:flex-row lg:border-quarternary lg:p-12">
           <div className="flex gap-4">
             <CustomLink href="https://cce.edu.in">
               <Image
@@ -43,16 +43,16 @@ const SocialConnect = () => {
             className="h-6 w-auto"
           />
 
-          <CustomLink href="https://techletics-24.vercel.app">
-            <Image
-              src="/logos/techletics-logo.svg"
-              width={280}
-              height={280}
-              alt="Techletics Logo"
-              priority
-              className="h-20 w-auto"
-            />
-          </CustomLink>
+          {/* <CustomLink href="https://techletics-24.vercel.app"> */}
+          <Image
+            src="/logos/techletics-logo.svg"
+            width={280}
+            height={280}
+            alt="Techletics Logo"
+            priority
+            className="h-20 w-auto"
+          />
+          {/* </CustomLink> */}
         </div>
 
         {/* Right Section */}
@@ -130,10 +130,10 @@ const Connect = () => {
                 priority
               />
               <CustomLink
-                href="https://cce.edu.in/"
+                href="mailto:code@cce.edu.in"
                 className="font-tertiary text-xl font-semibold hover:text-tertiary md:text-2xl xl:text-3xl"
               >
-                cce.edu.in
+                code@cce.edu.in
               </CustomLink>
             </div>
             <div className="flex gap-4 self-center">
@@ -146,17 +146,17 @@ const Connect = () => {
               />
               <div className="flex flex-wrap font-tertiary text-lg font-extrabold md:text-xl xl:text-2xl">
                 <CustomLink
-                  href="/"
+                  href="tel:+91 9400743624"
                   className="whitespace-nowrap hover:text-tertiary"
                 >
-                  +91 1234567890
+                  +91 9400743624
                 </CustomLink>
                 ,&nbsp;
                 <CustomLink
-                  href="/"
+                  href="tel:+91 7994043754"
                   className="whitespace-nowrap hover:text-tertiary"
                 >
-                  +91 9876543210
+                  +91 7994043754
                 </CustomLink>
               </div>
             </div>
