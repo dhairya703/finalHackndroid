@@ -32,12 +32,12 @@ const Registration = () => {
 
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
 
-        <div className="w-full flex items-center">
+        <div className="flex w-full origin-left scale-75 items-center justify-center sm:origin-center sm:scale-100">
           <div
             className="apply-button"
             data-hackathon-slug="designathon24"
             data-button-theme="dark-inverted"
-            style={{ height: "44px" }}
+            style={{ height: "44px", width: "100%" }}
           ></div>
         </div>
       </div>
