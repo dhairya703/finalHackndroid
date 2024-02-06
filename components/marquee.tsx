@@ -12,10 +12,13 @@ const TextMarquee = ({ mode = "light" }: TextMarqueeProps) => {
       {[...Array(10)].map((index) => (
         <p
           key={index}
-          className={clsx("flex gap-3 font-secondary text-2xl md:text-3xl", {
-            "text-primary": mode === "light",
-            "text-dark": mode === "dark",
-          })}
+          className={clsx(
+            "flex gap-3 pt-3 font-secondary text-2xl md:text-3xl",
+            {
+              "text-primary": mode === "light",
+              "text-dark": mode === "dark",
+            },
+          )}
         >
           <Image
             src="/icons/dot.svg"
