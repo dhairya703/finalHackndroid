@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
         </div>
         <Image
-          src="/images/hero-img.webp"
+          src="/images/hero.png"
           width={1047}
           height={960}
           alt="Designathon Image"

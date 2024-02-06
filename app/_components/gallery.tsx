@@ -10,7 +10,7 @@ import Link from "next/link";
 const Gallery = () => {
   const images = [
     {
-      src: Third,
+      src: Fourth,
       alt: "1",
     },
     {
@@ -34,8 +34,16 @@ const Gallery = () => {
       alt: "6",
     },
     {
-      src: Fourth,
+      src: Third,
       alt: "7",
+    },
+    {
+      src: Second,
+      alt: "8",
+    },
+    {
+      src: Fifth,
+      alt: "8",
     },
   ];
   return (
@@ -57,7 +65,7 @@ const Gallery = () => {
           </div>
         ))}
       </Marquee>
-      <p className="font-tertiary text-sm font-semibold opacity-50 sm:text-lg">
+      <p className="font-tertiary text-sm font-semibold opacity-50 transition-all duration-200 ease-in hover:opacity-100 sm:text-lg">
         The Previous Edition of{" "}
         <Link
           href="https://codedesignweek.netlify.app/designathon"

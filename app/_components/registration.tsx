@@ -14,8 +14,8 @@ const Registration = () => {
         className="relative left-0 z-10 w-full max-w-3xl 2xl:absolute"
       />
 
-      <div className="z-10 flex min-w-fit flex-col gap-6 sm:ml-auto">
-        <div className="rounded-xl bg-primary py-2 text-center font-secondary text-3xl text-dark">
+      <div className="z-10 flex min-w-fit items-center flex-col gap-6 sm:ml-auto">
+        <div className="w-full rounded-xl bg-primary py-2 text-center font-secondary text-3xl text-dark">
           REGISTER FOR FREE
         </div>
         <div className="flex flex-col justify-center gap-1">
