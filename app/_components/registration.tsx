@@ -34,7 +34,7 @@ const Registration = () => {
           className="apply-button mr-auto origin-left scale-75 sm:mx-auto sm:scale-100"
           data-hackathon-slug="designathon24"
           data-button-theme="dark-inverted"
-          style={{ height: "44px", width: "312px" }}
+          style={{ height: "40px", width: "284px" }}
         ></div>
       </div>
     </div>
