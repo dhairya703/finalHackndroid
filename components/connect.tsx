@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { SocialIcon } from "./svg/icons";
 import SectionLayout from "@/layouts/section-layout";
-import { CustomLink } from "@/components/custom";
+// import { CustomLink } from "@/components/custom";
 
 const SocialConnect = () => {
   return (
@@ -11,7 +11,7 @@ const SocialConnect = () => {
       <div className="flex flex-col overflow-clip lg:flex-row">
         {/* Left Section */}
         <div className="flex flex-col items-center justify-center gap-6 border-r border-transparent px-6 py-6 lg:w-1/2 lg:flex-row lg:border-quarternary lg:p-12">
-          <CustomLink href="https://cce.edu.in">
+          {/* <CustomLink href="https://cce.edu.in"> */}
             <Image
               src="/logos/association-logos.png"
               width={1000}
@@ -20,7 +20,7 @@ const SocialConnect = () => {
               priority
               className="h-16 w-auto sm:h-20"
             />
-          </CustomLink>
+          {/* </CustomLink> */}
         </div>
 
         {/* Right Section */}
