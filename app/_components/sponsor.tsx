@@ -37,7 +37,7 @@ const Sponsors = () => {
     },
   ];
   return (
-    <div className="z-50 flex flex-col items-center justify-center font-secondary">
+    <div className="z-10 flex flex-col items-center justify-center font-secondary">
       <div className="text-3xl text-white sm:text-6xl">
         <span className="text-tertiary">partnering</span> with
       </div>

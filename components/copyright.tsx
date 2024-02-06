@@ -10,12 +10,12 @@ const Copyright = () => {
         </span>
       </div> */}
       <Header type="secondary" />
-      
-      <div className="absolute">
+
+      <div className="absolute z-10">
         <span className="sm:text-md flex flex-wrap items-center justify-center font-tertiary text-sm text-white md:text-lg">
           <span className="whitespace-nowrap">Copyright © 2024&nbsp;</span>
           <CustomLink
-            href="https://cce.edu.in"
+            href="https://cce.edu.in/department/associations/1"
             className="whitespace-nowrap text-primary"
           >
             Community Of Developers.&nbsp;
