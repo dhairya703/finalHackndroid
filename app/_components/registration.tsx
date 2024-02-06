@@ -31,10 +31,10 @@ const Registration = () => {
         </div>
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
         <div
-          className="apply-button mr-auto origin-left scale-75 sm:mx-auto sm:scale-100"
+          className="apply-button w-full bg-red-500 text-lg sm:text-xl"
           data-hackathon-slug="designathon24"
           data-button-theme="dark-inverted"
-          style={{ height: "40px", width: "284px" }}
+          style={{ height: "44px" }}
         ></div>
       </div>
     </div>
