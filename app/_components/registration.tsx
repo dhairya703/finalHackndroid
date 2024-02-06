@@ -29,9 +29,11 @@ const Registration = () => {
             <span>2024</span>
           </span>
         </div>
+
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
+
         <div
-          className="apply-button w-full bg-red-500 text-lg sm:text-xl"
+          className="apply-button mr-auto sm:mx-auto"
           data-hackathon-slug="designathon24"
           data-button-theme="dark-inverted"
           style={{ height: "44px" }}
