@@ -19,7 +19,7 @@ const Registration = () => {
         <div className="w-full rounded-lg bg-primary px-6 py-2 text-center font-secondary text-lg text-dark sm:px-0 sm:text-xl md:text-2xl xl:text-3xl">
           REGISTER FOR FREE
         </div>
-        <div className="flex items-center flex-col justify-center gap-1">
+        <div className="flex flex-col items-center justify-center gap-1">
           <span className="flex flex-wrap font-secondary text-xl lowercase tracking-wider text-white sm:text-4xl">
             Application&nbsp;
             <span className="whitespace-nowrap">closes on&nbsp;</span>
@@ -32,8 +32,8 @@ const Registration = () => {
 
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
 
-        <div className="relative h-[44px] w-full overflow-clip rounded-lg bg-white">
-          <div className="absolute flex origin-left  scale-75 items-center justify-center sm:relative sm:w-full sm:origin-center sm:scale-100">
+        <div className="relative flex h-[44px] w-full items-center justify-center overflow-clip rounded-lg bg-white">
+          <div className="absolute flex origin-left scale-75 items-center justify-center sm:relative sm:w-full sm:origin-center sm:scale-100">
             <div
               className="apply-button"
               data-hackathon-slug="designathon24"
