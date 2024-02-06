@@ -10,6 +10,7 @@ import CollegeBanner from "@/components/college-banner";
 import TextMarquee from "@/components/marquee";
 import SectionLayout from "@/layouts/section-layout";
 import Sponsors from "./_components/sponsor";
+import Gallery from "./_components/gallery";
 
 export default function Home() {
   return (
@@ -48,6 +49,8 @@ export default function Home() {
       <SectionLayout>
         <Roadmap />
       </SectionLayout>
+
+        <Gallery />
 
       <SectionLayout>
         <Sponsors />
