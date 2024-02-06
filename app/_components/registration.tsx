@@ -32,7 +32,7 @@ const Registration = () => {
 
         <Script defer async src="https://apply.devfolio.co/v2/sdk.js" />
 
-        <div className="flex w-full origin-left scale-75 items-center justify-center sm:origin-center sm:scale-100">
+        <div className="flex w-full min-w-[314px] origin-left scale-75 items-center justify-center rounded-lg bg-white sm:origin-center sm:scale-100">
           <div
             className="apply-button"
             data-hackathon-slug="designathon24"
