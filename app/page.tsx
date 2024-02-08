@@ -16,12 +16,14 @@ import Faq from "./_components/faq";
 export default function Home() {
   return (
     <>
-      <Header />
+      <div className="flex flex-col">
+        <Header />
 
-      <SectionLayout full gapless>
-        <Hero />
-        <About />
-      </SectionLayout>
+        <SectionLayout full gapless>
+          <Hero />
+          <About />
+        </SectionLayout>
+      </div>
 
       <section className="relative h-fit bg-secondary">
         <div className="z-20 h-full flex-shrink-0 -rotate-1 transform border border-x-0 border-t-0 border-quarternary bg-tertiary py-2 md:py-4">

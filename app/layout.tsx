@@ -26,7 +26,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${turretRoad.variable} ${cakra.variable} ${amberyGarden.variable} overflow-x-clip bg-dark antialiased`}
+        className={`${turretRoad.variable} ${cakra.variable} ${amberyGarden.variable} w-screen overflow-x-clip bg-dark antialiased`}
       >
         <div className="gradient-wrapper -mb-[5000px] h-fit">
           <div className="galaxy-background"></div>
