@@ -63,20 +63,20 @@ const SocialConnect = () => {
 
           <div className="flex gap-6">
             <CustomLink
-              href="https://www.instagram.com/code_cce/"
-              className="rounded-full bg-white p-4 hover:bg-tertiary"
+              href="https://instagram.com/designathon.in"
+              className="h-16 w-16 rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="instagram" />
             </CustomLink>
             <CustomLink
               href="https://www.linkedin.com/company/code-design-week/"
-              className="rounded-full bg-white p-4 hover:bg-tertiary"
+              className="h-16 w-16 rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="linkedin" />
             </CustomLink>
             <CustomLink
               href="https://www.facebook.com/CODe.cce/"
-              className="rounded-full bg-white p-4 hover:bg-tertiary"
+              className="h-16 w-16 rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="facebook" />
             </CustomLink>
