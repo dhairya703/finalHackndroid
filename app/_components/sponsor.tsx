@@ -15,26 +15,26 @@ const Sponsors = () => {
       url: "https://devfolio.co/",
       alt: "DEVFOLIO LOGO",
     },
-    {
-      logo: POLYGON,
-      url: "https://polygon.technology/",
-      alt: "POLYGON LOGO",
-    },
-    {
-      logo: REPLIT,
-      url: "https://replit.com/",
-      alt: "REPLIT LOGO",
-    },
-    {
-      logo: SOLANA,
-      url: "https://solana.com/",
-      alt: "SOLANA LOGO",
-    },
-    {
-      logo: FILECOIN,
-      url: "https://filecoin.io/",
-      alt: "FILECOIN LOGO",
-    },
+    // {
+    //   logo: POLYGON,
+    //   url: "https://polygon.technology/",
+    //   alt: "POLYGON LOGO",
+    // },
+    // {
+    //   logo: REPLIT,
+    //   url: "https://replit.com/",
+    //   alt: "REPLIT LOGO",
+    // },
+    // {
+    //   logo: SOLANA,
+    //   url: "https://solana.com/",
+    //   alt: "SOLANA LOGO",
+    // },
+    // {
+    //   logo: FILECOIN,
+    //   url: "https://filecoin.io/",
+    //   alt: "FILECOIN LOGO",
+    // },
   ];
   return (
     <div className="z-10 flex flex-col items-center justify-center font-secondary">
