@@ -7,8 +7,8 @@ const Hero = () => {
         <div className="-mb-[120px] flex origin-top scale-75 transform flex-col items-center justify-center gap-12 md:-ml-10 lg:my-auto lg:-ml-4 lg:origin-center xl:ml-0 xl:scale-100">
           <div className="flex flex-col">
             <span className="text-center font-tertiary text-3xl font-extrabold text-white">
-              28&nbsp;
-              <span className="text-tertiary">&</span>
+              28
+              <span className="text-tertiary">&nbsp;&</span>
               &nbsp;29 FEB,&nbsp;
               <span className="text-tertiary">2024</span>
             </span>
