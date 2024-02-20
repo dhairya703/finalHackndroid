@@ -8,11 +8,11 @@ const Roadmap = () => {
       description: "Registration for DESIGNATHON ‘24 starts through Devfolio.",
     },
     {
-      date: "20th February",
+      date: "22th February",
       description: "Registration of DESIGNATHON ‘24 comes to an end.",
     },
     {
-      date: "22nd February",
+      date: "23nd February",
       description: "Shortlisting based on submissions and user profiles.",
     },
     {

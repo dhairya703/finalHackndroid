@@ -26,7 +26,7 @@ const Registration = () => {
               <span className="whitespace-nowrap">closes on</span>
             </span>
             <span className="flex flex-wrap font-tertiary text-[5vw] font-medium tracking-wider text-white md:text-[64px]">
-              <span className="whitespace-nowrap">FEB 20,&nbsp;</span>
+              <span className="whitespace-nowrap">FEB 22,&nbsp;</span>
               <span>2024</span>
             </span>
           </div>
