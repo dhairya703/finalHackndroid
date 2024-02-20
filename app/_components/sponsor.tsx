@@ -15,12 +15,12 @@ const Sponsors = () => {
     },
     {
       logo: FUNDESIGN,
-      url: "https://fundesign.com/",
+      url: "https://fundesign.in",
       alt: "FUNDESIGN LOGO",
     },
     {
       logo: MULEARN,
-      url: "https://mulearn.io/",
+      url: "https://mulearn.org",
       alt: "MULEARN LOGO",
     },
     // {
