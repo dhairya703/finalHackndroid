@@ -49,7 +49,7 @@ const Gallery = () => {
   return (
     <div className="z-40 flex flex-col items-center justify-center py-10">
       <div className="text-normal px-4 pb-4 pt-12 text-center font-secondary text-3xl sm:px-12 sm:pt-20 sm:text-4xl md:text-5xl lg:px-16 lg:pt-24 lg:text-6xl xl:px-32 xl:pt-32 2xl:px-48">
-        glipmse into the&nbsp;
+        glimpse into the&nbsp;
         <span className="text-tertiary">memories&nbsp;</span>we{" "}
         <span className="whitespace-nowrap">have created</span>
       </div>
