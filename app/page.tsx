@@ -12,6 +12,7 @@ import SectionLayout from "@/layouts/section-layout";
 import Sponsors from "./_components/sponsor";
 import Gallery from "./_components/gallery";
 import Faq from "./_components/faq";
+import ProblemStatements from "./_components/problemStatements";
 
 export default function Home() {
   return (
@@ -48,6 +49,10 @@ export default function Home() {
           <CollegeBanner />
         </SectionLayout>
       </section>
+
+      {/* <SectionLayout>
+        <ProblemStatements />
+      </SectionLayout> */}
 
       <SectionLayout>
         <Roadmap />
