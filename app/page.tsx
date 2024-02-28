@@ -50,9 +50,9 @@ export default function Home() {
         </SectionLayout>
       </section>
 
-      {/* <SectionLayout>
+      <SectionLayout>
         <ProblemStatements />
-      </SectionLayout> */}
+      </SectionLayout>
 
       <SectionLayout>
         <Roadmap />
