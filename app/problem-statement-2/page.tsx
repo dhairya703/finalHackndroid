@@ -20,7 +20,7 @@ const page = () => {
         </div>
         <CustomText highlightedDescription>
           The culinary world is evolving, especially with a surge in home
-          baking. There's a need for a digital platform where home bakers and
+          baking. There&apos;s a need for a digital platform where home bakers and
           cooking passionates can share recipes, connect, and grow together.
         </CustomText>
       </SectionLayout>
