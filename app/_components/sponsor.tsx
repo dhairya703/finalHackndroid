@@ -1,30 +1,24 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import DEVFOLIO from "@/public/sponsors/devfolio.png";
-import MULEARN from "@/public/sponsors/mulearn.png";
-import FUNDESIGN from "@/public/sponsors/fundesign.png";
+import DEALZY from "@/public/sponsors/logo2.png";
+import SASHIDO from "@/public/sponsors/logo4.jpg";
 
 const Sponsors = () => {
   const sponsors = [
     {
-      logo: DEVFOLIO,
-      url: "https://devfolio.co/",
-      alt: "DEVFOLIO LOGO",
+      logo: DEALZY,
+      url: "https://dealzy.app/",
+      alt: "DEALZY LOGO",
     },
     {
-      logo: FUNDESIGN,
-      url: "https://fundesign.in",
-      alt: "FUNDESIGN LOGO",
-    },
-    {
-      logo: MULEARN,
-      url: "https://mulearn.org",
-      alt: "MULEARN LOGO",
+      logo: SASHIDO,
+      url: "https://www.sashido.io/en/",
+      alt: "SASHIDO LOGO",
     },
   ];
   return (
-    <div className="z-10 flex flex-col items-center justify-center font-secondary">
+    <div className="z-20 flex flex-col items-center justify-center font-secondary">
       <div className="text-3xl text-white sm:text-6xl">
         <span className="text-tertiary">partnering</span> with
       </div>
@@ -33,8 +27,8 @@ const Sponsors = () => {
           <Link key={sponsor.url} href={sponsor.url} className="cursor-pointer">
             <Image
               src={sponsor.logo}
-              className="opacity-50 transition duration-200 ease-in hover:opacity-100"
-              height={33}
+              className="opacity-1 transition duration-200 ease-in hover:opacity-100"
+              height={60}
               onClick={() => window.open(sponsor.url)}
               alt={sponsor.alt}
             />

@@ -1,16 +1,16 @@
 import Marquee from "react-fast-marquee";
-import Second from "@/public/gallery/2.png";
-import Third from "@/public/gallery/3.png";
-import Fourth from "@/public/gallery/4.png";
-import Fifth from "@/public/gallery/5.png";
-import Sixth from "@/public/gallery/6.png";
+import Second from "@/public/gallery/IM2.jpg";
+import Third from "@/public/gallery/IM3.jpg";
+import Fourth from "@/public/gallery/IM4.jpg";
+import Fifth from "@/public/gallery/IM5.jpg";
+import First from "@/public/gallery/IM1.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
 const Gallery = () => {
   const images = [
     {
-      src: Fourth,
+      src: First,
       alt: "1",
     },
     {
@@ -30,9 +30,10 @@ const Gallery = () => {
       alt: "5",
     },
     {
-      src: Sixth,
+      src: First,
       alt: "6",
     },
+
     {
       src: Third,
       alt: "7",
@@ -41,6 +42,11 @@ const Gallery = () => {
       src: Second,
       alt: "8",
     },
+  
+  {
+    src: Fourth,
+    alt: "8",
+  },
     {
       src: Fifth,
       alt: "8",
@@ -65,16 +71,7 @@ const Gallery = () => {
           </div>
         ))}
       </Marquee>
-      <p className="font-tertiary text-sm font-semibold opacity-50 transition-all duration-200 ease-in hover:opacity-100 sm:text-lg">
-        The Previous Edition of{" "}
-        <Link
-          href="https://codedesignweek.netlify.app/designathon"
-          className="underline"
-          target="_blank"
-        >
-          DESIGNATHON by CODe
-        </Link>
-      </p>
+      
     </div>
   );
 };

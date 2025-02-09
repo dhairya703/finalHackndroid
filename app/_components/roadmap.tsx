@@ -5,28 +5,21 @@ const Roadmap = () => {
   const events = [
     {
       date: "05th February",
-      description: "Registration for DESIGNATHON ‘24 starts through Devfolio.",
+      description: "Registration for Hack-n-Droid '25 begins through the VIT Portal. This is your first step to join an exciting coding adventure.",
     },
     {
-      date: "22th February",
-      description: "Registration of DESIGNATHON ‘24 comes to an end.",
+      date: "13th February",
+      description: "The registration window closes. Ensure your entries are submitted before the deadline to secure your spot in the hackathon.",
     },
     {
-      date: "23nd February",
-      description: "Shortlisting based on submissions and user profiles.",
+      date: "14th February",
+      description: "The hackathon kicks off! Start brainstorming, coding, and collaborating with your team to bring innovative ideas to life.",
     },
     {
-      date: "24th February",
-      description: "Shortlisted Participants are informed via emails.",
+      date: "15th February",
+      description: "The hackathon concludes with project submission, judging, results announcement, and distribution of certificates and goodies.",
     },
-    {
-      date: "28th February",
-      description: "DESIGNATHON‘24 begins at 06 PM in the evening.",
-    },
-    {
-      date: "29th February",
-      description: "DESIGNATHON ‘24 ends and valedictory ceremony.",
-    },
+  
   ];
 
   return (
