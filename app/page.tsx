@@ -36,7 +36,7 @@ export default function Home() {
       </section>
 
       <SectionLayout>
-        <Prizes />
+        {/* <Prizes /> */}
         <Registration />
       </SectionLayout>
 

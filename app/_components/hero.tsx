@@ -7,9 +7,9 @@ const Hero = () => {
         <div className="-mb-[120px] flex origin-top scale-75 transform flex-col items-center justify-center gap-12 md:-ml-10 lg:my-auto lg:-ml-4 lg:origin-center xl:ml-0 xl:scale-100">
           <div className="flex flex-col">
             <span className="text-center font-tertiary text-3xl font-extrabold text-white">
-              28
+              14
               <span className="text-tertiary">&nbsp;&</span>
-              &nbsp;29 FEB,&nbsp;
+              &nbsp;15 FEB,&nbsp;
               <span className="text-tertiary">2024</span>
             </span>
             <Image
@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-evenly gap-4">
             <div className="flex flex-col px-2 text-center">
               <p className="font-tertiary text-6xl font-extrabold text-tertiary">
-                12
+                24
               </p>
               <p className="font-secondary text-xl lowercase text-white md:text-2xl">
                 Hours
@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-col px-2 text-center">
               <p className="font-tertiary text-6xl font-extrabold text-tertiary">
-                18k
+                1L+
               </p>
               <p className="font-secondary text-xl lowercase text-white md:text-2xl">
                 Prizepool
