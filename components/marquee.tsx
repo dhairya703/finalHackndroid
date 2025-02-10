@@ -29,8 +29,8 @@ const TextMarquee = ({ mode = "light" }: TextMarqueeProps) => {
             className="ml-3"
           />
 
-          <span>designathon</span>
-          <span className="font-tertiary font-extrabold">&apos;24</span>
+          <span>Hack-n-Droid</span>
+          <span className="font-tertiary font-extrabold">&apos;25</span>
         </p>
       ))}
     </Marquee>
