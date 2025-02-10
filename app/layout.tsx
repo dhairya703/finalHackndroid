@@ -5,9 +5,9 @@ import Copyright from "@/components/copyright";
 import { Connect, SocialConnect } from "@/components/connect";
 
 export const metadata: Metadata = {
-  title: "Designathon '24",
+  title: "Hack-n-Droid '25",
   description:
-    "Designathon conducted as a part of Tech Fest organized by Christ College of Engineering, Irinjalakuda",
+    "Hack-n-Droid is a 24-hour hackathon where you can build, learn, and grow.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logos/designathon-logo.svg" />
+        <link rel="icon" href="/logos/androidlogo.jpg" />
         <link
           href="https://uploads-ssl.webflow.com/6408bea3de5aef58b7e197d4/css/diagramwf.webflow.c946343f1.min.css"
           rel="stylesheet"

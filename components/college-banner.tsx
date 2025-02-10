@@ -5,9 +5,9 @@ const CollegeBanner = () => {
 <div className="relative w-full flex justify-center">
   <div className="w-full">
     <Image
-      src="/images/college1.png"
+      src="/images/imgcoll.png"
       width={1920}  // High-resolution for full width
-      height={800}  // Adjusted height to maintain aspect ratio
+      height={200}  // Adjusted height to maintain aspect ratio
       alt="College"
       priority
       className="w-full h-auto object-cover filter grayscale"

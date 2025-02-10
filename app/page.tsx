@@ -26,8 +26,8 @@ export default function Home() {
         </SectionLayout>
       </div>
 
-      <section className="relative h-fit bg-secondary">
-        <div className="z-20 h-full flex-shrink-0 -rotate-1 transform border border-x-0 border-t-0 border-quarternary bg-tertiary py-2 md:py-4">
+      <section className="relative h-fit bg-secondary z-20">
+        <div className="z-40 h-full flex-shrink-0 -rotate-1 transform border border-x-0 border-t-0 border-quarternary bg-tertiary py-2 md:py-4">
           <TextMarquee mode="dark" />
         </div>
         <div className="absolute bottom-0 z-0 h-full w-full flex-shrink-0 -rotate-2 transform border border-x-0 border-t-0 border-quarternary bg-primary py-2 md:py-4">

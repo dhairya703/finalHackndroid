@@ -14,14 +14,18 @@ const Registration = () => {
 
   return (
     <div className="flex w-full flex-wrap items-center justify-between gap-6 pb-6 pt-0 sm:pt-8 md:-mb-12 md:mt-12 md:pb-8 xl:pb-4">
-      <Image
-        src="/images/cube.webp"
-        alt="Cube Image"
-        width={1313}
-        height={960}
-        priority
-        className="relative bottom-0 left-0 z-10 w-full max-w-3xl md:absolute md:opacity-30 lg:opacity-15 xl:opacity-50 2xl:opacity-100"
-      />
+<video
+  src="/images/promo.mp4" // Path to your video file
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="absolute bottom-0 left-0 z-[1] w-[70%] max-w-2xl h-auto md:opacity-30 lg:opacity-15 xl:opacity-50 2xl:opacity-100 object-cover"
+/>
+
+
+
+
 
       <div className="flex w-full items-center justify-center">
         <div className="z-10 flex w-full max-w-lg flex-col gap-6 md:pb-28 lg:ml-auto">
