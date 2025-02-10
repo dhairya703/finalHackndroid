@@ -2,19 +2,23 @@ import Image from "next/image";
 
 const CollegeBanner = () => {
   return (
-    <div className="relative h-full w-full">
-      <div className="h-full min-h-60 w-full">
-        <Image
-          src="/images/college.webp"
-          width={4096}
-          height={803}
-          alt="College"
-          priority
-          className="min-h-60 object-cover"
-        />
-      </div>
+<div className="relative w-full flex justify-center">
+  <div className="w-full">
+    <Image
+      src="/images/college1.png"
+      width={1920}  // High-resolution for full width
+      height={800}  // Adjusted height to maintain aspect ratio
+      alt="College"
+      priority
+      className="w-full h-auto object-cover filter grayscale"
+    />
+  </div>
 
-      <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-1 text-center font-secondary tracking-wider sm:gap-5 xl:-mt-4">
+
+ 
+  
+
+      <div className="absolute top-0 flex h-full w-full flex-col items-center justify-top gap-1 text-center font-secondary tracking-wider sm:gap-5 xl:-mt-4">
         <span className="text-xl lowercase  text-primary md:-mt-2 md:text-2xl lg:text-3xl xl:-mt-4">
           hackathon venue
         </span>
