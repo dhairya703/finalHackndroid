@@ -8,7 +8,7 @@ import Script from "next/script";
 const Registration = () => {
   const router = useRouter()
   const handleClick = () => {
-    router.push('https://chennaievents.vit.ac.in/')
+    router.push('https://vitchennaievents.com/conf1/')
   }
   
 
