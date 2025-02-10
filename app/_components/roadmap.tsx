@@ -30,7 +30,7 @@ const Roadmap = () => {
 
       <div className="flex items-start justify-center gap-6">
         <div
-          className="z-10 grid-cols-1 grid-rows-6 gap-12 py-6 sm:grid-cols-2 sm:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2"
+          className="z-10 grid-cols-1 grid-rows-4 gap-12 py-6 sm:grid-cols-2 sm:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2"
           style={{ display: "grid" }}
         >
           {events.map((event, index) => (
