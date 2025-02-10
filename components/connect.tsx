@@ -39,10 +39,10 @@ const Connect = () => {
                 priority
               />
               <CustomLink
-                href="mailto:code@cce.edu.in"
+                href="mailto:androidclub@vit.ac.in"
                 className="font-tertiary text-xl font-semibold hover:text-tertiary md:text-2xl xl:text-3xl"
               >
-                code@cce.edu.in
+                androidclub@vit.ac.in
               </CustomLink>
             </div>
             <div className="flex gap-4 self-center">
@@ -55,17 +55,17 @@ const Connect = () => {
               />
               <div className="flex flex-wrap font-tertiary text-lg font-extrabold md:text-xl xl:text-2xl">
                 <CustomLink
-                  href="tel:+91 9400743624"
+                  href="tel:+91 7408346927"
                   className="whitespace-nowrap hover:text-tertiary"
                 >
-                  +91 9400743624
+                  +91 7408346927
                 </CustomLink>
                 ,&nbsp;
                 <CustomLink
-                  href="tel:+91 7994043754"
+                  href="tel:+91 7602077436"
                   className="whitespace-nowrap hover:text-tertiary"
                 >
-                  +91 7994043754
+                  +91 7602077436
                 </CustomLink>
               </div>
             </div>
@@ -85,7 +85,7 @@ const SocialConnect = () => {
           <div className="flex gap-4">
             <CustomLink href="https://cce.edu.in">
               <Image
-                src="/logos/cce-logo.png"
+                src="/logos/androidlogo.jpg"
                 width={280}
                 height={280}
                 alt="Christ College of Engineering Logo"
@@ -93,28 +93,28 @@ const SocialConnect = () => {
                 className="h-20 w-auto"
               />
             </CustomLink>
-            <CustomLink href="https://cce.edu.in/department/associations/1">
+            <CustomLink href="https://vit.ac.in">
               <Image
-                src="/logos/code-logo.png"
+                src="/logos/vitlogo.svg"
                 width={280}
                 height={280}
-                alt="CODe Logo"
+                alt="VIT Chennai Logo"
                 priority
                 className="h-20 w-auto"
               />
-            </CustomLink>
+               </CustomLink>
           </div>
 
-          <Image
+          {/* <Image
             src="/icons/join.svg"
             width={280}
             height={280}
             alt="Connect Icon"
             priority
             className="h-6 w-auto"
-          />
+          /> */}
 
-          {/* <CustomLink href="https://techletics-24.vercel.app"> */}
+          {/* <CustomLink href="https://techletics-24.vercel.app">
           <Image
             src="/logos/techletics-logo.svg"
             width={280}
@@ -124,7 +124,7 @@ const SocialConnect = () => {
             className="h-20 w-auto"
           />
           {/* </CustomLink> */}
-        </div>
+        </div> 
 
         {/* Right Section */}
         <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 px-12 py-6 md:gap-8 lg:w-1/2 lg:p-12">
@@ -134,23 +134,18 @@ const SocialConnect = () => {
 
           <div className="flex gap-6">
             <CustomLink
-              href="https://instagram.com/designathon.in"
+              href="https://www.instagram.com/androidvitc?igsh=YmdhNHZhbmlndnFq"
               className="h-16 w-16 rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="instagram" />
             </CustomLink>
             <CustomLink
-              href="https://www.linkedin.com/company/code-design-week/"
+              href="https://www.linkedin.com/company/android-club-vitc/"
               className="h-16 w-16 rounded-full bg-white p-4 hover:bg-tertiary"
             >
               <SocialIcon logo="linkedin" />
             </CustomLink>
-            <CustomLink
-              href="https://www.facebook.com/CODe.cce/"
-              className="h-16 w-16 rounded-full bg-white p-4 hover:bg-tertiary"
-            >
-              <SocialIcon logo="facebook" />
-            </CustomLink>
+           
           </div>
 
           <Image

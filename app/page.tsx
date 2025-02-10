@@ -53,6 +53,9 @@ export default function Home() {
       <SectionLayout>
         <ProblemStatements />
       </SectionLayout>
+      <SectionLayout>
+        <Sponsors />
+      </SectionLayout>
 
       <SectionLayout>
         <Roadmap />
@@ -66,9 +69,7 @@ export default function Home() {
         <Faq />
       </SectionLayout>
 
-      <SectionLayout>
-        <Sponsors />
-      </SectionLayout>
+
     </>
   );
 }

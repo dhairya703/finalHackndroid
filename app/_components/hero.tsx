@@ -30,6 +30,7 @@ const Hero = () => {
             <div className="flex flex-col px-2 text-center">
               <p className="font-tertiary text-6xl font-extrabold text-tertiary">
                 24
+                24
               </p>
               <p className="font-secondary text-xl lowercase text-white md:text-2xl">
                 Hours
@@ -37,6 +38,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-col px-2 text-center">
               <p className="font-tertiary text-6xl font-extrabold text-tertiary">
+                1L+
                 1L+
               </p>
               <p className="font-secondary text-xl lowercase text-white md:text-2xl">
