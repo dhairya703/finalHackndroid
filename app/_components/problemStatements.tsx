@@ -5,13 +5,13 @@ import Link from "next/link";
 
 const ProblemStatements = () => {
   const problemStatements = [
-    { href: "/problem-statement-1", title: "1", hover: "edTech" },
-    { href: "/problem-statement-2", title: "2", hover: "Law" },
-    { href: "/problem-statement-3", title: "3", hover: "Healthcare" },
-    { href: "/problem-statement-3", title: "4", hover: "Public Safety" },
-    { href: "/problem-statement-3", title: "5", hover: "Sustainability" },
-    { href: "/problem-statement-3", title: "6", hover: "Modern Ecommerce Solution" },
-    { href: "/problem-statement-3", title: "7", hover: "Open Innovation" },
+    { href: "/problem-statement-1", title: "EdTech", hover: "edTech" },
+    { href: "/problem-statement-2", title: "Law", hover: "Law" },
+    { href: "/problem-statement-3", title: "Healthcare", hover: "Healthcare" },
+    { href: "/problem-statement-3", title: "Public Safety", hover: "Public Safety" },
+    { href: "/problem-statement-3", title: "Sustainability", hover: "Sustainability" },
+    { href: "/problem-statement-3", title: "Modern Ecommerce Solution", hover: "Modern Ecommerce Solution" },
+    { href: "/problem-statement-3", title: "Open Innovation", hover: "Open Innovation" },
   ];
   return (
     <div className="z-20">

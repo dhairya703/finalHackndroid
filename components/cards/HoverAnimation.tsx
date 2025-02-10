@@ -6,7 +6,7 @@ const HoverTextAnimation = ({ default: defaultText, hover }: { default: string; 
 
   return (
       <motion.div
-        className={`flex size-32 cursor-pointer text-center items-center justify-center rounded-2xl border-4 border-primary font-secondary ${hovered? "text-xl" : "text-5xl"} font-bold transition-all duration-100 ease-in hover:border-secondary md:size-40 `}
+        className={`flex size-32 cursor-pointer text-center items-center justify-center rounded-2xl border-4 border-primary font-secondary ${hovered? "text-xl" : "text-xl"} font-bold transition-all duration-100 ease-in hover:border-secondary md:size-40 `}
         onHoverStart={() => setHovered(true)}
         onHoverEnd={() => setHovered(false)}
       >
