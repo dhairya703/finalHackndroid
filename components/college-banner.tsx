@@ -23,7 +23,7 @@ const CollegeBanner = () => {
           hackathon venue
         </span>
         <span className="text-2xl lowercase text-white md:text-3xl lg:text-4xl xl:-mt-2">
-          Kasturba Hall, VIT Chennai
+          MG Auditorium, VIT Chennai
         </span>
         <span className="xs:pt-2 font-tertiary text-lg font-semibold tracking-normal text-tertiary md:-mt-2 lg:text-xl xl:-mt-6">
           Kelambakkam, Chennai, Tamil Nadu

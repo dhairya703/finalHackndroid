@@ -83,7 +83,7 @@ const SocialConnect = () => {
         {/* Left Section */}
         <div className="z-10 flex flex-col items-center justify-center gap-6 border-r border-transparent px-6 py-6 lg:w-1/2 lg:flex-row lg:border-quarternary lg:p-12">
           <div className="flex gap-4">
-            <CustomLink href="https://cce.edu.in">
+            <CustomLink href="https://androidclub.in">
               <Image
                 src="/logos/androidlogo.jpg"
                 width={280}

@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -42,7 +41,7 @@ className="absolute top-0 bottom-0 left-0 z-[1] w-[100%] sm:w-[70%] max-w-2xl h-
               <span className="whitespace-nowrap">closes on</span>
             </span>
             <span className="flex flex-wrap font-tertiary text-[5vw] font-bold tracking-wider text-white md:text-[64px]">
-              <span className="whitespace-nowrap">FEB 13,&nbsp;</span>
+              <span className="whitespace-nowrap">FEB 13 (12:30 Am),&nbsp;</span>
               <span>2025</span>
             </span>
           </div>
