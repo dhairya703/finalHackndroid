@@ -1,14 +1,30 @@
 "use client";
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
 const Registration = () => {
+  const [disabled, setDisabled] = useState(false)
   const router = useRouter()
-  const handleClick = () => {
-    router.push('https://vitchennaievents.com/conf1/')
+  const handleClick1 = () => {
+    router.push('/leaderboard')
+    setDisabled(true)
   }
+
+  const handleClick3 = () => {
+    router.push('/certificate')
+    setDisabled(true)
+  }
+
+  useEffect(() => {
+    async function reset() {
+      setDisabled(false)
+    }
+  }, [])
+  
   
 
   return (
@@ -19,33 +35,30 @@ const Registration = () => {
   loop
   muted
   playsInline
-  className="w-full lazy-video absolute bottom-0 left-0 z-[1] w-[70%] sm:max-w-2xl h-auto md:opacity-30 lg:opacity-15 xl:opacity-50 2xl:opacity-100 object-cover"
+  className="absolute bottom-0 left-0 z-[1] w-[70%] max-w-2xl h-auto md:opacity-30 lg:opacity-15 xl:opacity-50 2xl:opacity-100 object-cover"
 />
 
-{/* <video src="/images/promo.mp4" autoPlay loop muted 
-playsInline 
-className="absolute top-0 bottom-0 left-0 z-[1] w-[100%] sm:w-[70%] max-w-2xl h-auto opacity-80 md:opacity-30 lg:opacity-15 xl:opacity-50 2xl:opacity-100 object-cover" />
- */}
 
 
 
 
-      <div className="flex w-full items-center justify-center mt-20">
+      <div className="flex w-full items-center justify-center">
         <div className="z-10 flex w-full max-w-lg flex-col gap-6 md:pb-28 lg:ml-auto">
-          <div className="w-full font-bold letter-spacing-4 rounded-xl border border-primary bg-green-900 sm:bg-primary bg-opacity-40 sm:bg-opacity-15 px-6 py-3 text-center font-secondary text-xl text-primary sm:px-0 sm:text-xl md:text-2xl xl:text-3xl">
+          {/* <div className="w-full rounded-xl border border-primary bg-primary bg-opacity-15 px-6 py-3 text-center font-secondary text-lg text-primary sm:px-0 sm:text-xl md:text-2xl xl:text-3xl">
             REGISTER NOW
-          </div>
+          </div> */}
           <div className="flex flex-col items-center justify-center gap-2">
             <span className="flex flex-wrap font-secondary text-[5.5vw] lowercase tracking-wider text-white sm:py-1 sm:text-[5.7vw] md:text-[38px]">
               Application&nbsp;
-              <span className="whitespace-nowrap">closes on</span>
+              <span className="whitespace-nowrap">closed</span>
             </span>
-            <span className="flex flex-wrap font-tertiary text-[5vw] font-bold tracking-wider text-white md:text-[64px]">
-              <span className="whitespace-nowrap">FEB 13 (12:30 Am),&nbsp;</span>
+            {/* <span className="flex flex-wrap font-tertiary text-[5vw] font-medium tracking-wider text-white md:text-[64px]">
+              <span className="whitespace-nowrap">FEB 13,&nbsp;</span>
               <span>2025</span>
-            </span>
+            </span> */}
           </div>
-          <button className="w-full py-5 rounded-xl bg-white text-blue-400 text-xl font-bold" onClick={handleClick}>Register on VITC Events</button>
+          <button className="bg-green-500 p-5 w-full rounded-full font-tertiary font-bold text-xl z-50 cursor-pointer hover:bg-green-600" onClick={handleClick1} disabled={disabled}>View Leaderboard</button>
+          <button className="bg-green-500 p-5 w-full rounded-full font-tertiary font-bold text-xl z-50 cursor-pointer hover:bg-green-600" onClick={handleClick3} disabled={disabled}>Download Certificates</button>
           {/* <Script defer async src="https://apply.devfolio.co/v2/sdk.js" /> */}
           {/* <div className="relative flex h-[56px] w-full items-center justify-center overflow-clip rounded-xl bg-white">
             <div className="absolute flex origin-center scale-75 items-center justify-center sm:relative sm:w-full sm:scale-100">
