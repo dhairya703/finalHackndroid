@@ -27,6 +27,11 @@ const teams: Record<string, string[]> = {
       "Aaditya Arora",
       "Aaryan Manchanda"
   ],
+  "92159": [
+      "Aditi kar",
+      "Harshini Maale",
+      "Aarushi Saxena"
+  ],
   "Adapters ": [
       "Ishani Ghosh",
       "N Dharanikanth Reddy ",
@@ -91,7 +96,7 @@ const teams: Record<string, string[]> = {
   "BIT SIZED BRAINS": [
       "Preethika",
       "Pavitra V M",
-      "VIVEGAA P K",
+      "Vivegaa P K",
       "R.Harini"
   ],
   "Billiance": [
