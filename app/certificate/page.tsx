@@ -94,7 +94,7 @@ const teams: Record<string, string[]> = {
       "Harsh"
   ],
   "BIT SIZED BRAINS": [
-      "Preethika",
+      "G Preethika",
       "Pavitra V M",
       "Vivegaa P K",
       "R.Harini"
