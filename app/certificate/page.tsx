@@ -102,8 +102,8 @@ const teams: Record<string, string[]> = {
   "Billiance": [
       "Tamil Aadhavan",
       "Mohamed Basheer",
-      "Keshava a k ",
-      "SADU VENKATESH"
+      "Keshava A K",
+      "Sadu Venkatesh"
   ],
   "Billiance 2": [
       "Jude Allen ",
@@ -783,7 +783,7 @@ const CertificateGenerator = () => {
     if (!ctx) return;
 
     const backgroundImage = new Image();
-    backgroundImage.src = "/template/certificate-template.jpg";
+    backgroundImage.src = "/template/certificate-template.png";
     backgroundImage.onload = () => {
       ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#82b5c6";

@@ -11,7 +11,6 @@ const Page = () => {
     const [leaderboard, setLeaderboard] = useState<LeaderboardUser[]>([
         {teamName:"zimz"},
         {teamName:"GigaBois"},
-        {teamName:"billiance"},
         {teamName:"Digital Shinobi"},
         {teamName:"Hackoholics"},
         {teamName:"Market Minds"},
@@ -130,7 +129,8 @@ const Page = () => {
         {teamName:"Edgepulse"},
         {teamName:"code wizards"},
         {teamName:"Pookiemons"},
-        {teamName:"TrioGeeks"}
+        {teamName:"TrioGeeks"},
+        {teamName:"billiance"},
     ]
     );
     return (

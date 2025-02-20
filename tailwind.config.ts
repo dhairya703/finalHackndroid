@@ -27,6 +27,7 @@ const config: Config = {
         primary: ["var(--font-amberyGarden)"],
         secondary: ["var(--font-cakra)"],
         tertiary: ["var(--font-turret-road)"],
+        vcr: ['VCR_OSD_MONO', 'monospace'],
       },
       fontSize: {
         big: "184px",
