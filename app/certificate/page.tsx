@@ -759,14 +759,6 @@ const CertificateGenerator = () => {
   const [certificateUrl, setCertificateUrl] = useState("");
 
   // Load the font dynamically
-  const loadFont = async () => {
-    const font = new FontFace(
-      "Great Vibes",
-      "url(https://fonts.gstatic.com/s/greatvibes/v15/RWmMoKWR9v4ksMfaWd_JN9XFiaE.ttf)"
-    );
-    await font.load();
-    document.fonts.add(font);
-  };
 
   const handleGenerate = () => {
     if (!selectedTeam || !selectedMember) return;
@@ -774,7 +766,6 @@ const CertificateGenerator = () => {
   };
 
   const generateCertificate = async (name: string) => {
-    await loadFont(); // Ensure font is loaded before drawing
 
     const canvas = document.createElement("canvas");
     canvas.width = 800;
@@ -783,11 +774,11 @@ const CertificateGenerator = () => {
     if (!ctx) return;
 
     const backgroundImage = new Image();
-    backgroundImage.src = "/template/certificate-template.png";
+    backgroundImage.src = "/template/certificate-template.jpg";
     backgroundImage.onload = () => {
       ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#82b5c6";
-      ctx.font = "55px 'Great Vibes', cursive";
+      ctx.font = "55px 'Poppins', sans-serif";
       const textWidth = ctx.measureText(name).width;
       const x = (canvas.width - textWidth) / 2;
       ctx.fillText(name, x, 353);
