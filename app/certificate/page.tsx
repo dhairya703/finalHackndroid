@@ -250,7 +250,7 @@ const teams: Record<string, string[]> = {
       "Abhijeet Pandey",
       "Goutham Srinath",
       "Benita Grace",
-      "santhosh"
+      "Santhosh"
   ],
   "Disco Devs": [
       "Harika",
