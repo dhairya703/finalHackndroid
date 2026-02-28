@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { ButtonColorful } from '@/components/button-colorful';
 
@@ -11,37 +11,9 @@ const RobotModel = dynamic(() => import('./RobotModel'), {
 
 export function HeroSection() {
     const titleRef = useRef<HTMLHeadingElement>(null);
-    const [timeLeft, setTimeLeft] = useState('00:00:00');
-
-    useEffect(() => {
-        const targetDate = new Date('Mar 2, 2026 09:00:00').getTime();
-
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            if (distance < 0) {
-                setTimeLeft("00:00:00");
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            setTimeLeft(`${days}:${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`);
-        };
-
-        const interval = setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <section id="hero" className="hero-new">
-            <div className="timer-bg">{timeLeft}</div>
 
             <div className="container">
                 <div className="hero-grid">
