@@ -56,7 +56,7 @@ export function HeroSection() {
                             <div className="title-stack">
                                 <span className="text-metallic">HACK</span>
                                 <div className="title-row-2">
-                                    <span className="text-2-0">2.0</span>
+                                    <span className="text-2-0">2.0   </span>
                                     <span className="text-metallic title-front">-N-</span>
                                 </div>
                                 <span className="text-purple-metallic drop-shadow-lg">DROID</span>

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Home as HomeIcon, User, Layers, HelpCircle, LogIn } from 'lucide-react';
 import { NavBar } from '@/components/nav-bar';
 
 import { HeroSection } from '@/components/sections/hero/hero-section';
@@ -15,11 +14,11 @@ export default function Home() {
   const floatRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const navItems = [
-    { name: 'HOME', url: '#hero', icon: HomeIcon },
-    { name: 'ABOUT', url: '#about', icon: User },
-    { name: 'TRACKS', url: '#tracks', icon: Layers },
-    { name: 'TIMELINE', url: '#timeline', icon: LogIn },
-    { name: 'FAQ', url: '#faq', icon: HelpCircle },
+    { name: 'HOME', url: '#hero' },
+    { name: 'ABOUT', url: '#about' },
+    { name: 'TRACKS', url: '#tracks' },
+    { name: 'TIMELINE', url: '#timeline' },
+    { name: 'FAQ', url: '#faq' },
   ];
 
   // Float elements micro-interaction for background
