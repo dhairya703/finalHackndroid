@@ -27,6 +27,7 @@ const TrackModel = dynamic(() => import('./TrackModel'), {
 });
 
 import { ButtonColorful } from '@/components/button-colorful';
+import { FaqSection } from '@/components/faq-section';
 
 export default function Home() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -328,6 +329,10 @@ export default function Home() {
 
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FaqSection />
+
       </main>
     </div>
   );
