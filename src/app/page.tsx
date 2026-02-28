@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { NavBar } from '@/components/nav-bar';
+import { SplashScreen } from '@/components/splash-screen';
 
 import { HeroSection } from '@/components/sections/hero/hero-section';
 import { AboutSection } from '@/components/sections/about/about-section';
@@ -12,6 +13,26 @@ import { FaqSection } from '@/components/sections/faq/faq-section';
 
 export default function Home() {
   const floatRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [showSplash, setShowSplash] = useState(true);
+  const [sceneReady, setSceneReady] = useState(false);
+
+  const handleSceneReady = useCallback(() => {
+    setSceneReady(true);
+  }, []);
+
+  const handleSplashFinished = useCallback(() => {
+    setShowSplash(false);
+  }, []);
+
+  // Lock body scroll during splash
+  useEffect(() => {
+    if (showSplash) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [showSplash]);
 
   const navItems = [
     { name: 'HOME', url: '#hero' },
@@ -52,6 +73,11 @@ export default function Home() {
 
   return (
     <div className="main-wrapper">
+      {/* Splash Screen */}
+      {showSplash && (
+        <SplashScreen ready={sceneReady} onFinished={handleSplashFinished} />
+      )}
+
       {/* Background Elements */}
       <div className="background-elements">
         <div className="stars"></div>
@@ -71,7 +97,7 @@ export default function Home() {
       <NavBar items={navItems} />
 
       <main>
-        <HeroSection />
+        <HeroSection onSceneReady={handleSceneReady} />
         <AboutSection />
         <TracksSection />
         <TimelineSection />
@@ -81,3 +107,4 @@ export default function Home() {
     </div>
   );
 }
+

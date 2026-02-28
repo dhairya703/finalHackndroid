@@ -9,7 +9,11 @@ const RobotModel = dynamic(() => import('./RobotModel'), {
     loading: () => <div className="absolute inset-0 z-0 flex items-center justify-center opacity-50">Loading Robot...</div>
 });
 
-export function HeroSection() {
+interface HeroSectionProps {
+    onSceneReady?: () => void;
+}
+
+export function HeroSection({ onSceneReady }: HeroSectionProps) {
     const titleRef = useRef<HTMLHeadingElement>(null);
 
     return (
@@ -50,7 +54,7 @@ export function HeroSection() {
                     </div>
 
                     <div className="hero-robot-container">
-                        <RobotModel />
+                        <RobotModel onSceneReady={onSceneReady} />
                     </div>
 
                 </div>
