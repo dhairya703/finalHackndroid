@@ -18,8 +18,8 @@ export default function Home() {
     { name: 'HOME', url: '#hero', icon: HomeIcon },
     { name: 'ABOUT', url: '#about', icon: User },
     { name: 'TRACKS', url: '#tracks', icon: Layers },
+    { name: 'TIMELINE', url: '#timeline', icon: LogIn },
     { name: 'FAQ', url: '#faq', icon: HelpCircle },
-    { name: 'REGISTER', url: '#register', icon: LogIn },
   ];
 
   // Float elements micro-interaction for background

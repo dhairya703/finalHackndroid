@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { LucideIcon } from "lucide-react"
@@ -20,6 +20,9 @@ interface NavBarProps {
 export function NavBar({ items, className }: NavBarProps) {
     const [activeTab, setActiveTab] = useState(items[0].name)
     const [isMobile, setIsMobile] = useState(false)
+    // Track whether the user just clicked a nav link (to temporarily ignore scroll updates)
+    const isClickNavigation = useRef(false)
+    const clickTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
     useEffect(() => {
         const handleResize = () => {
@@ -30,6 +33,77 @@ export function NavBar({ items, className }: NavBarProps) {
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
     }, [])
+
+    // IntersectionObserver to track which section is in view
+    useEffect(() => {
+        // Build a map from section ID -> nav item name
+        const sectionToName: Record<string, string> = {}
+        items.forEach((item) => {
+            const id = item.url.replace("#", "")
+            if (id) sectionToName[id] = item.name
+        })
+
+        // Collect all existing section elements
+        const sectionIds = Object.keys(sectionToName)
+        const sectionElements = sectionIds
+            .map((id) => document.getElementById(id))
+            .filter(Boolean) as HTMLElement[]
+
+        if (sectionElements.length === 0) return
+
+        // Track which sections are currently intersecting and their ratios
+        const visibleSections = new Map<string, number>()
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (isClickNavigation.current) return
+
+                entries.forEach((entry) => {
+                    const id = entry.target.id
+                    if (entry.isIntersecting) {
+                        visibleSections.set(id, entry.intersectionRatio)
+                    } else {
+                        visibleSections.delete(id)
+                    }
+                })
+
+                // Pick the section with the highest intersection ratio
+                let bestId = ""
+                let bestRatio = 0
+                visibleSections.forEach((ratio, id) => {
+                    if (ratio > bestRatio) {
+                        bestRatio = ratio
+                        bestId = id
+                    }
+                })
+
+                if (bestId && sectionToName[bestId]) {
+                    setActiveTab(sectionToName[bestId])
+                }
+            },
+            {
+                // Multiple thresholds for finer-grained ratio updates
+                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+                rootMargin: "-10% 0px -10% 0px",
+            }
+        )
+
+        sectionElements.forEach((el) => observer.observe(el))
+
+        return () => {
+            observer.disconnect()
+        }
+    }, [items])
+
+    const handleNavClick = (itemName: string) => {
+        setActiveTab(itemName)
+        // Temporarily ignore scroll-based updates so the click takes precedence
+        isClickNavigation.current = true
+        if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current)
+        clickTimeoutRef.current = setTimeout(() => {
+            isClickNavigation.current = false
+        }, 800)
+    }
 
     return (
         <div
@@ -47,7 +121,7 @@ export function NavBar({ items, className }: NavBarProps) {
                         <Link
                             key={item.name}
                             href={item.url}
-                            onClick={() => setActiveTab(item.name)}
+                            onClick={() => handleNavClick(item.name)}
                             className={cn(
                                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                                 "text-white/60 hover:text-white",
