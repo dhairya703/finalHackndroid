@@ -725,10 +725,9 @@ body {
 
 /* About Section */
 .about-section {
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 0;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
@@ -888,7 +887,7 @@ body {
 /* Tracks Section */
 .tracks-section {
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: var(--bg-color);
   overflow: hidden;
   z-index: 10;
@@ -898,7 +897,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   font-family: 'Outfit', system-ui, -apple-system, sans-serif;
   z-index: 20;
   position: relative;
@@ -1014,7 +1013,7 @@ body {
 /* Partners Section */
 .partners-section {
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: var(--bg-color);
   z-index: 10;
 }
@@ -1023,13 +1022,24 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(3rem, 6vw, 5rem);
   text-align: center;
-  color: var(--text-main);
-  background: linear-gradient(135deg, #fff 0%, #adb5bd 100%);
+  background: linear-gradient(135deg,
+      #f3e8ff 0%,
+      #c084fc 15%,
+      #a855f7 30%,
+      #fff 50%,
+      #7e22ce 55%,
+      #581c87 70%,
+      #c084fc 85%,
+      #f3e8ff 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  filter:
+    drop-shadow(0 0 15px rgba(168, 85, 247, 0.3)) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+  animation: metallic-shine 4s ease-in-out infinite;
 }
 
 .sponsor-tier {
@@ -1163,7 +1173,7 @@ body {
 /* Timeline Section */
 .timeline-section {
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: var(--bg-color);
   z-index: 10;
   overflow: hidden;
@@ -1173,13 +1183,36 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(3rem, 6vw, 5rem);
   text-align: center;
-  color: var(--text-main);
-  background: linear-gradient(135deg, #fff 0%, #adb5bd 100%);
+  background: linear-gradient(135deg,
+      #f3e8ff 0%,
+      #c084fc 15%,
+      #a855f7 30%,
+      #fff 50%,
+      #7e22ce 55%,
+      #581c87 70%,
+      #c084fc 85%,
+      #f3e8ff 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 5rem;
-  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  letter-spacing: 4px;
+  filter:
+    drop-shadow(0 0 15px rgba(168, 85, 247, 0.3)) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+  animation: metallic-shine 4s ease-in-out infinite;
+}
+
+@keyframes metallic-shine {
+
+  0%,
+  100% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 0% 50%;
+  }
 }
 
 .timeline-model-container {
