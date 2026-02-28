@@ -45,7 +45,7 @@ export default function PhoneModel({ scrollProgress, videoUrl }: { scrollProgres
         }
 
         // Manage Video Playback Reset
-        const isVisible = scrollProgress > 0.95;
+        const isVisible = scrollProgress > 0.99;
         if (isVisible && !wasVisibleRef.current) {
             if (videoRef.current) {
                 videoRef.current.currentTime = 0;
