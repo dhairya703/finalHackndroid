@@ -3,9 +3,9 @@
 import React, { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 
-interface ButtonColorfulProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonColorfulProps extends HTMLMotionProps<"button"> {
     label?: string;
 }
 
@@ -53,16 +53,11 @@ export function ButtonColorful({
         >
             {/* Gradient background effect */}
             <div
-                className={cn(
-                    "absolute inset-0",
-                    "opacity-40 blur",
-                    "transition-opacity duration-500"
-                )}
+                className="absolute inset-0 opacity-40 group-hover:opacity-80 blur transition-opacity duration-500 button-bg-gradient"
                 style={{
                     background: 'linear-gradient(to right, #6366f1, #a855f7, #ec4899)',
                     transition: 'opacity 0.5s',
                 }}
-                className="absolute inset-0 opacity-40 group-hover:opacity-80 blur transition-opacity duration-500 button-bg-gradient"
             />
 
             {/* Content */}
@@ -83,5 +78,3 @@ export function ButtonColorful({
         </motion.button>
     );
 }
-
-export { ButtonColorful }

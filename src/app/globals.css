@@ -888,7 +888,7 @@ body {
 /* Tracks Section */
 .tracks-section {
   position: relative;
-  padding: 10rem 0;
+  padding: 4rem 0;
   background: var(--bg-color);
   overflow: hidden;
   z-index: 10;
@@ -906,11 +906,11 @@ body {
 
 .arenas-slashes {
   color: #b518e6;
-  font-size: clamp(5rem, 12vw, 10rem);
+  font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 900;
   font-style: italic;
   line-height: 0.8;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   transform: skewX(-12deg);
 }
 
@@ -922,10 +922,10 @@ body {
 
 .arenas-main {
   color: #ffffff;
-  font-size: clamp(4.5rem, 11vw, 9rem);
+  font-size: clamp(3rem, 7.5vw, 6rem);
   font-weight: 900;
   line-height: 0.8;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   text-transform: uppercase;
 }
 
@@ -935,12 +935,12 @@ body {
   left: 46%;
   transform: translateX(-50%);
   color: transparent;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
   text-transform: uppercase;
   z-index: 2;
-  -webkit-text-stroke: 14px var(--bg-color);
+  -webkit-text-stroke: 10px var(--bg-color);
   paint-order: stroke fill;
 }
 
@@ -1014,7 +1014,7 @@ body {
 /* Partners Section */
 .partners-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 4rem 0;
   background: var(--bg-color);
   z-index: 10;
 }
@@ -1028,12 +1028,12 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   letter-spacing: 2px;
 }
 
 .sponsor-tier {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .tier-title {
@@ -1163,7 +1163,7 @@ body {
 /* Timeline Section */
 .timeline-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 4rem 0;
   background: var(--bg-color);
   z-index: 10;
   overflow: hidden;
