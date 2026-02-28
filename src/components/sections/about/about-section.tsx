@@ -69,7 +69,7 @@ export function AboutSection() {
                     <div className="phone-container">
                         <PhoneModel
                             scrollProgress={scrollProgress}
-                            videoUrl="/hnd_trailer.mp4"
+                            videoUrl="/videos/hnd_trailer.mp4"
                         />
                     </div>
                 </div>

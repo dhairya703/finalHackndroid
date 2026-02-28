@@ -13,7 +13,7 @@ export function PartnersSection() {
                     <div className="sponsor-grid single-sponsor">
                         <div className="sponsor-card gold-sponsor">
                             <div className="sponsor-card-bg"></div>
-                            <img src="/partner-seqato.png" alt="SEQATO" className="sponsor-logo" />
+                            <img src="/images/partner-seqato.png" alt="SEQATO" className="sponsor-logo" />
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@ export function PartnersSection() {
                     <div className="sponsor-grid single-sponsor">
                         <div className="sponsor-card silver-sponsor">
                             <div className="sponsor-card-bg"></div>
-                            <img src="/partner-ndmit.png" alt="NDMIT" className="sponsor-logo" />
+                            <img src="/images/partner-ndmit.png" alt="NDMIT" className="sponsor-logo" />
                         </div>
                     </div>
                 </div>
@@ -33,11 +33,11 @@ export function PartnersSection() {
                     <div className="sponsor-grid">
                         <div className="sponsor-card other-sponsor">
                             <div className="sponsor-card-bg"></div>
-                            <img src="/partner-xyz.png" alt=".xyz" className="sponsor-logo" />
+                            <img src="/images/partner-xyz.png" alt=".xyz" className="sponsor-logo" />
                         </div>
                         <div className="sponsor-card other-sponsor">
                             <div className="sponsor-card-bg"></div>
-                            <img src="/partner-interviewbuddy.png" alt="Interview Buddy" className="sponsor-logo" />
+                            <img src="/images/partner-interviewbuddy.png" alt="Interview Buddy" className="sponsor-logo" />
                         </div>
                     </div>
                 </div>
