@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import CardFlip from '@/components/flip-card';
+import CardFlip from '@/components/ui/flip-card';
 
 export function TracksSection() {
     return (
@@ -14,7 +14,7 @@ export function TracksSection() {
                 </div>
             </div>
             <div className="track-model-container">
-                <CardFlip color='#ff2e88'/>
+                <CardFlip color='#ff2e88' />
             </div>
         </section>
     );

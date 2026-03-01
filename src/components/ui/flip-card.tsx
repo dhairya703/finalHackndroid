@@ -51,18 +51,17 @@ export default function CardFlip({
             'absolute inset-0 h-full w-full',
             '[transform:rotateY(0deg)] [backface-visibility:hidden]',
             'overflow-hidden rounded-2xl',
-            'bg-gradient-to-br from-white via-slate-50 to-slate-100',
-            'dark:from-zinc-900 dark:via-zinc-900/95 dark:to-zinc-800',
-            'border border-slate-200 dark:border-zinc-800/50',
-            'shadow-lg dark:shadow-xl',
+            'bg-white/5 backdrop-blur-md',
+            'border border-white/10',
+            'shadow-xl',
             'transition-all duration-700',
-            'group-hover:shadow-xl dark:group-hover:shadow-2xl',
-            'group-hover:border-primary/20 dark:group-hover:border-primary/30',
+            'group-hover:shadow-2xl',
+            'group-hover:border-primary/30',
             isFlipped ? 'opacity-0' : 'opacity-100',
           )}
         >
           {/* Background gradient effect */}
-          <div className="from-primary/5 dark:from-primary/10 absolute inset-0 bg-gradient-to-br via-transparent to-blue-500/5 dark:to-blue-500/10" />
+          <div className="from-primary/10 absolute inset-0 bg-gradient-to-br via-transparent to-primary/5" />
 
           {/* Animated code blocks */}
           <div className="absolute inset-0 flex items-center justify-center pt-20">
@@ -106,10 +105,10 @@ export default function CardFlip({
           <div className="absolute right-0 bottom-0 left-0 p-5">
             <div className="flex items-center justify-between gap-3">
               <div className="space-y-1.5">
-                <h3 className="text-lg leading-snug font-semibold tracking-tight text-zinc-900 transition-all duration-500 ease-out group-hover:translate-y-[-4px] dark:text-white">
+                <h3 className="text-lg leading-snug font-semibold tracking-tight text-white transition-all duration-500 ease-out group-hover:translate-y-[-4px]">
                   {title}
                 </h3>
-                <p className="line-clamp-2 text-sm tracking-tight text-zinc-600 transition-all delay-[50ms] duration-500 ease-out group-hover:translate-y-[-4px] dark:text-zinc-300">
+                <p className="line-clamp-2 text-sm tracking-tight text-white/60 transition-all delay-[50ms] duration-500 ease-out group-hover:translate-y-[-4px]">
                   {subtitle}
                 </p>
               </div>
@@ -133,19 +132,18 @@ export default function CardFlip({
             'absolute inset-0 h-full w-full',
             '[transform:rotateY(180deg)] [backface-visibility:hidden]',
             'rounded-2xl p-5',
-            'bg-gradient-to-br from-white via-slate-50 to-slate-100',
-            'dark:from-zinc-900 dark:via-zinc-900/95 dark:to-zinc-800',
-            'border border-slate-200 dark:border-zinc-800',
-            'shadow-lg dark:shadow-xl',
+            'bg-white/5 backdrop-blur-md',
+            'border border-white/10',
+            'shadow-xl',
             'flex flex-col',
             'transition-all duration-700',
-            'group-hover:shadow-xl dark:group-hover:shadow-2xl',
-            'group-hover:border-primary/20 dark:group-hover:border-primary/30',
+            'group-hover:shadow-2xl',
+            'group-hover:border-primary/30',
             !isFlipped ? 'opacity-0' : 'opacity-100',
           )}
         >
           {/* Background gradient */}
-          <div className="from-primary/5 dark:from-primary/10 absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-blue-500/5 dark:to-blue-500/10" />
+          <div className="from-primary/10 absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-primary/5" />
 
           <div className="relative z-10 flex-1 space-y-5">
             <div className="space-y-2">
@@ -153,11 +151,11 @@ export default function CardFlip({
                 <div className="from-primary via-primary/90 to-primary/80 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br">
                   <Code2 className="h-4 w-4 text-white" />
                 </div>
-                <h3 className="text-lg leading-snug font-semibold tracking-tight text-zinc-900 transition-all duration-500 ease-out group-hover:translate-y-[-2px] dark:text-white">
+                <h3 className="text-lg leading-snug font-semibold tracking-tight text-white transition-all duration-500 ease-out group-hover:translate-y-[-2px]">
                   {title}
                 </h3>
               </div>
-              <p className="line-clamp-2 text-sm tracking-tight text-zinc-600 transition-all duration-500 ease-out group-hover:translate-y-[-2px] dark:text-zinc-400">
+              <p className="line-clamp-2 text-sm tracking-tight text-white/60 transition-all duration-500 ease-out group-hover:translate-y-[-2px]">
                 {description}
               </p>
             </div>
@@ -170,7 +168,7 @@ export default function CardFlip({
                 return (
                   <div
                     key={feature}
-                    className="flex items-center gap-3 text-sm text-zinc-700 transition-all duration-500 dark:text-zinc-300"
+                    className="flex items-center gap-3 text-sm text-white/80 transition-all duration-500"
                     style={{
                       transform: isFlipped
                         ? 'translateX(0)'
@@ -179,7 +177,7 @@ export default function CardFlip({
                       transitionDelay: `${index * 100 + 200}ms`,
                     }}
                   >
-                    <div className="bg-primary/10 dark:bg-primary/20 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md">
+                    <div className="bg-primary/20 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md">
                       <IconComponent className="text-primary h-3 w-3" />
                     </div>
                     <span className="font-medium">{feature}</span>
@@ -189,22 +187,20 @@ export default function CardFlip({
             </div>
           </div>
 
-          <div className="relative z-10 mt-auto border-t border-slate-200 pt-4 dark:border-zinc-800">
+          <div className="relative z-10 mt-auto border-t border-white/10 pt-4">
             <div
               className={cn(
                 'group/start relative',
                 'flex items-center justify-between',
                 'rounded-lg p-2.5',
                 'transition-all duration-300',
-                'bg-gradient-to-r from-slate-100 via-slate-100 to-slate-100',
-                'dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800',
-                'hover:from-primary/10 hover:via-primary/5 hover:to-transparent',
-                'dark:hover:from-primary/20 dark:hover:via-primary/10 dark:hover:to-transparent',
+                'bg-white/5',
+                'hover:bg-primary/10',
                 'hover:scale-[1.02] hover:cursor-pointer',
-                'hover:border-primary/20 border border-transparent',
+                'hover:border-primary/30 border border-transparent',
               )}
             >
-              <span className="group-hover/start:text-primary text-sm font-semibold text-zinc-900 transition-colors duration-300 dark:text-white">
+              <span className="group-hover/start:text-primary text-sm font-semibold text-white transition-colors duration-300">
                 Start Building
               </span>
               <div className="group/icon relative">
