@@ -25,7 +25,7 @@ export function ButtonColorful({
         const middleY = clientY - (top + height / 2);
 
         // Intensity of the magnetic pull
-        setPosition({ x: middleX * 0.3, y: middleY * 0.3 });
+        setPosition({ x: middleX * 0.2, y: middleY * 0.2 });
     };
 
     const reset = () => {
@@ -40,23 +40,23 @@ export function ButtonColorful({
             onMouseMove={handleMouse}
             onMouseLeave={reset}
             animate={{ x, y }}
-            transition={{ type: "spring", stiffness: 200, damping: 15, mass: 0.1 }}
+            transition={{ type: "spring", stiffness: 500, damping: 15, mass: 0.1 }}
             className={cn(
-                "relative h-12 px-6 overflow-hidden rounded-md cursor-pointer outline-none border-none",
-                "bg-zinc-100 text-zinc-900",
-                "transition-all duration-200",
+                "relative h-12 px-6 overflow-hidden cursor-pointer border-2 border-zinc-700",
+                "text-zinc-900",
+                "transition-all duration-5",
                 "group",
                 className
             )}
-            style={{ backgroundColor: '#f4f4f5' }} // Fallback background
+            style={{ background: 'linear-gradient(to right, #6366f1, #a855f7, #ec4899)', }} // Fallback background
             {...props}
         >
             {/* Gradient background effect */}
             <div
-                className="absolute inset-0 opacity-40 group-hover:opacity-80 blur transition-opacity duration-500 button-bg-gradient"
+                className="absolute inset-0 group-hover:opacity-80 blur duration-500 button-bg-gradient"
                 style={{
                     background: 'linear-gradient(to right, #6366f1, #a855f7, #ec4899)',
-                    transition: 'opacity 0.5s',
+                    transition: ' 0.5s',
                 }}
             />
 

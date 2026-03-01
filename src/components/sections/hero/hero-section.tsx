@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { ButtonColorful } from '@/components/ui/button-colorful';
+import Link from "next/link";
 
 const RobotModel = dynamic(() => import('./RobotModel'), {
     ssr: false,
@@ -44,7 +45,9 @@ export function HeroSection({ onSceneReady }: HeroSectionProps) {
                         </p>
 
                         {/* <div className="cta-container" style={{ position: 'relative', zIndex: 20 }}>
-                            <ButtonColorful label="JOIN THE HACKATHON" />
+                            <Link href='/leaderboard'>
+                                <ButtonColorful label="VIEW LEADERBOARD" />
+                            </Link>
                         </div> */}
 
                         <div style={{ marginTop: '3rem', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 500, letterSpacing: '0.2rem', opacity: 0.6, textTransform: 'uppercase' }}>

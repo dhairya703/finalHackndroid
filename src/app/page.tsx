@@ -10,6 +10,8 @@ import { TracksSection } from '@/components/sections/tracks/tracks-section';
 import { TimelineSection } from '@/components/sections/timeline/timeline-section';
 import { PartnersSection } from '@/components/sections/partners/partners-section';
 import { FaqSection } from '@/components/sections/faq/faq-section';
+import Copyright from "@/components/copyright";
+import { Connect, SocialConnect } from "@/components/connect";
 
 export default function Home() {
   const floatRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -110,6 +112,13 @@ export default function Home() {
         <PartnersSection />
         <FaqSection />
       </main>
+      <footer className="bg-black border-t border-white/10 p-8 mt-auto backdrop-blur-md">
+        <div className="max-w-7xl mx-auto flex flex-col gap-12">
+          <Connect />
+          <SocialConnect />
+          <Copyright />
+        </div>
+      </footer>
     </div>
   );
 }
