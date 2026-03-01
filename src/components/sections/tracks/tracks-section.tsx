@@ -74,6 +74,14 @@ export function TracksSection() {
     }
     ];
     const icons = [HatGlasses, Cpu, Lightbulb, HeartPulse, Landmark, Blocks];
+    const trackColors = [
+    "rgba(51, 65, 85, 1)",    // #334155  - Cybersecurity
+    "rgba(124, 58, 237, 0.5)",  // #7C3AED  - AR/VR
+    "rgba(249, 115, 22, 0.5)",  // #F97316  - Open Innovation
+    "rgba(20, 184, 166, 0.5)",  // #14B8A6  - Healthcare
+    "rgba(5, 150, 105, 0.5)",   // #059669  - FinTech
+    "rgba(79, 70, 229, 0.5)"    // #4F46E5  - Blockchain
+    ];
     return (
         <section id="tracks" className="tracks-section">
             <div className="arenas-title-container">
@@ -92,6 +100,7 @@ export function TracksSection() {
                         description={track.description}
                         features={track.features}
                         icon={icons[index]}
+                        tcolor={trackColors[index]}
                     />
                     ))}
             </div>

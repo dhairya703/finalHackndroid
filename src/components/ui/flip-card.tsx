@@ -11,6 +11,7 @@ export interface CardFlipProps {
   features?: string[];
   color?: string;
   icon?: LucideIcon;
+  tcolor?: string;
 }
 
 export default function CardFlip({
@@ -25,6 +26,7 @@ export default function CardFlip({
   ],
   color = '#ff2e88',
   icon: Icon = Rocket,
+  tcolor = '#ffffff',
 }: CardFlipProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -32,6 +34,7 @@ export default function CardFlip({
     <div
       style={{
         ['--primary' as any]: color ?? '#2563eb',
+        ['--tcolor' as any]: tcolor ?? '#ffffff',
       }}
       className="group relative h-[360px] w-full max-w-[300px] [perspective:2000px]"
       onMouseEnter={() => setIsFlipped(true)}
@@ -91,11 +94,12 @@ export default function CardFlip({
                 <div
                   className={cn(
                     'h-12 w-12 rounded-xl',
-                    'from-primary via-primary/90 to-primary/80 bg-gradient-to-br',
+                    // 'from-primary via-primary/90 to-primary/80 bg-gradient-to-br',
                     'flex items-center justify-center',
                     'shadow-primary/25 shadow-lg',
                     'transition-all duration-500 group-hover:scale-110 group-hover:rotate-12',
                   )}
+                  style={{ backgroundColor: 'var(--tcolor)' }}
                 >
                   <Icon className="h-6 w-6 text-white" />
                 </div>
@@ -107,7 +111,10 @@ export default function CardFlip({
           <div className="absolute right-0 bottom-0 left-0 p-5">
             <div className="flex items-center justify-between gap-3">
               <div className="space-y-1.5">
-                <h3 className="text-lg leading-snug font-semibold tracking-tight text-white transition-all duration-500 ease-out group-hover:translate-y-[-4px]">
+                <h3 
+                  className="text-lg leading-snug font-semibold tracking-tight transition-all duration-500 ease-out group-hover:translate-y-[-4px]"
+                  style={{ color: 'var(--tcolor)' }}
+                >
                   {title}
                 </h3>
                 <p className="line-clamp-2 text-sm tracking-tight text-white/60 transition-all delay-[50ms] duration-500 ease-out group-hover:translate-y-[-4px]">
@@ -129,20 +136,19 @@ export default function CardFlip({
         </div>
 
         {/* Back of card */}
-{/* Back of card */}
-<div
-  className={cn(
-    'absolute inset-0',
-    '[transform:rotateY(180deg)] [backface-visibility:hidden]',
-    'transition-all duration-700',
-    !isFlipped ? 'opacity-0' : 'opacity-100',
-  )}
->
-  {/* Gradient Border Wrapper */}
-  <div className="h-full w-full rounded-2xl bg-gradient-to-br from-[#a855f7] to-[#ec4899] p-[1px]">
+    <div
+      className={cn(
+        'absolute inset-0',
+        '[transform:rotateY(180deg)] [backface-visibility:hidden]',
+        'transition-all duration-700',
+        !isFlipped ? 'opacity-0' : 'opacity-100',
+      )}
+    >
+      {/* Gradient Border Wrapper */}
+      <div className="h-full w-full rounded-2xl bg-gradient-to-br from-[#a855f7] to-[#ec4899] p-[1px]">
     
     {/* Glass Card */}
-    <div className="h-full w-full rounded-2xl bg-[#0a0a0a] backdrop-blur-md p-5 shadow-xl flex flex-col relative">
+        <div className="h-full w-full rounded-2xl bg-[#0a0a0a] backdrop-blur-md p-5 shadow-xl flex flex-col relative">
           {/* Background gradient */}
           <div className="from-primary/10 absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-primary/5" />
 
