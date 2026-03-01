@@ -46,7 +46,7 @@ export function FaqSection() {
     };
 
     return (
-        <section id="faq" className="faq-section" style={{ padding: '8rem 0', position: 'relative', zIndex: 10, background: 'var(--bg-color)' }}>
+        <section id="faq" className="faq-section" style={{ padding: '8rem 0', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', zIndex: 10, background: 'var(--bg-color)' }}>
             <div className="container">
                 <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '4rem' }} className="md:grid-cols-2">
 

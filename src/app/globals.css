@@ -1231,7 +1231,9 @@ html {
 .about-section {
   display: flex;
   align-items: center;
-  padding: 60px 0;
+  justify-content: center;
+  padding: 8rem 0;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -1391,7 +1393,11 @@ html {
 /* Tracks Section */
 .tracks-section {
   position: relative;
-  padding: 2rem 0;
+  padding: 8rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--bg-color);
   overflow: hidden;
   z-index: 10;
@@ -1529,7 +1535,11 @@ html {
 /* Partners Section */
 .partners-section {
   position: relative;
-  padding: 2rem 0;
+  padding: 8rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--bg-color);
   z-index: 10;
 }
@@ -1689,7 +1699,11 @@ html {
 /* Timeline Section */
 .timeline-section {
   position: relative;
-  padding: 2rem 0;
+  padding: 8rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--bg-color);
   z-index: 10;
   overflow: hidden;

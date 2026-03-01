@@ -33,10 +33,9 @@ function formatCountdown(distance: number) {
     };
 }
 
-export function TimelineSection() {
+export function TimelineSection({ onLoaded }: { onLoaded?: () => void }) {
     const sectionRef = useRef<HTMLElement>(null);
     const timerRef = useRef<HTMLDivElement>(null);
-    const [mountKey, setMountKey] = useState(0);
     const [time, setTime] = useState({ hours: '--', minutes: '--', seconds: '--' });
 
     // Countdown logic
@@ -67,25 +66,7 @@ export function TimelineSection() {
         });
     }, []);
 
-    // Remount observer for Spline model
-    useEffect(() => {
-        const node = sectionRef.current;
-        if (!node) return;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setMountKey(prev => prev + 1);
-                    }
-                });
-            },
-            { threshold: 0.2 }
-        );
-
-        observer.observe(node);
-        return () => observer.disconnect();
-    }, []);
+    // Removed Spline remounting logic so it loads once during splash screen
 
     const units = [
         { label: 'HOURS', value: time.hours },
@@ -113,7 +94,7 @@ export function TimelineSection() {
                 </div>
             </div>
             <div className="timeline-model-container">
-                <TimelineModel key={mountKey} />
+                <TimelineModel onLoaded={onLoaded} />
             </div>
         </section>
     );

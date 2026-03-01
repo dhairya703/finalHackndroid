@@ -8,7 +8,7 @@ const PhoneModel = dynamic(() => import('./PhoneModel'), {
     loading: () => <div className="phone-placeholder"><div className="phone-screen">PREPARING 3D...</div></div>
 });
 
-export function AboutSection() {
+export function AboutSection({ onLoaded }: { onLoaded?: () => void }) {
     const aboutRef = useRef<HTMLElement>(null);
     const aboutContentRef = useRef<HTMLDivElement>(null);
     const [scrollProgress, setScrollProgress] = useState(0);
@@ -42,7 +42,7 @@ export function AboutSection() {
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
 
-            const progress = Math.min(1, Math.max(0, scrollY / windowHeight));
+            const progress = Math.min(0.5, Math.max(0, scrollY / windowHeight));
             setScrollProgress(progress);
         };
 
@@ -70,6 +70,7 @@ export function AboutSection() {
                         <PhoneModel
                             scrollProgress={scrollProgress}
                             videoUrl="/videos/hnd_trailer.mp4"
+                            onLoaded={onLoaded}
                         />
                     </div>
                 </div>

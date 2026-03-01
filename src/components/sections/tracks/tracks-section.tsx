@@ -1,12 +1,6 @@
 "use client";
 
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-const TrackModel = dynamic(() => import('./TrackModel'), {
-    ssr: false,
-    loading: () => <div className="phone-placeholder"><div className="phone-screen">LOADING TRACKS...</div></div>
-});
 
 export function TracksSection() {
     return (
@@ -19,7 +13,7 @@ export function TracksSection() {
                 </div>
             </div>
             <div className="track-model-container">
-                <TrackModel />
+                {/* TrackModel has been removed */}
             </div>
         </section>
     );

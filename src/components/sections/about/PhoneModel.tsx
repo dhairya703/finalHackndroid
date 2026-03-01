@@ -4,7 +4,7 @@ import { Suspense, useEffect, useRef, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import type { Application } from '@splinetool/runtime';
 
-export default function PhoneModel({ scrollProgress, videoUrl }: { scrollProgress: number, videoUrl: string }) {
+export default function PhoneModel({ scrollProgress, videoUrl, onLoaded }: { scrollProgress: number, videoUrl: string, onLoaded?: () => void }) {
     const splineApp = useRef<Application | null>(null);
 
     function onLoad(app: Application) {
@@ -26,6 +26,10 @@ export default function PhoneModel({ scrollProgress, videoUrl }: { scrollProgres
             mainObj.rotation.y = Math.PI; // Start showing the initial side
             (app as any)._phoneMasterObj = mainObj;
         }
+
+        if (onLoaded) {
+            onLoaded();
+        }
     }
 
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -45,7 +49,7 @@ export default function PhoneModel({ scrollProgress, videoUrl }: { scrollProgres
         }
 
         // Manage Video Playback Reset
-        const isVisible = scrollProgress > 0.99;
+        const isVisible = scrollProgress > 0.95;
         if (isVisible && !wasVisibleRef.current) {
             if (videoRef.current) {
                 videoRef.current.currentTime = 0;

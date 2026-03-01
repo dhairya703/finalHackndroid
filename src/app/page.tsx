@@ -14,11 +14,17 @@ import { FaqSection } from '@/components/sections/faq/faq-section';
 export default function Home() {
   const floatRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [showSplash, setShowSplash] = useState(true);
-  const [sceneReady, setSceneReady] = useState(false);
+  const [modelsLoaded, setModelsLoaded] = useState({
+    robot: false,
+    phone: false,
+    timeline: false
+  });
 
-  const handleSceneReady = useCallback(() => {
-    setSceneReady(true);
-  }, []);
+  const sceneReady = modelsLoaded.robot && modelsLoaded.phone && modelsLoaded.timeline;
+
+  const handleRobotReady = useCallback(() => setModelsLoaded(m => ({ ...m, robot: true })), []);
+  const handlePhoneReady = useCallback(() => setModelsLoaded(m => ({ ...m, phone: true })), []);
+  const handleTimelineReady = useCallback(() => setModelsLoaded(m => ({ ...m, timeline: true })), []);
 
   const handleSplashFinished = useCallback(() => {
     setShowSplash(false);
@@ -97,10 +103,10 @@ export default function Home() {
       <NavBar items={navItems} />
 
       <main>
-        <HeroSection onSceneReady={handleSceneReady} />
-        <AboutSection />
+        <HeroSection onSceneReady={handleRobotReady} />
+        <AboutSection onLoaded={handlePhoneReady} />
         <TracksSection />
-        <TimelineSection />
+        <TimelineSection onLoaded={handleTimelineReady} />
         <PartnersSection />
         <FaqSection />
       </main>
