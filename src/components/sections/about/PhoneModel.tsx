@@ -23,7 +23,7 @@ export default function PhoneModel({ scrollProgress, videoUrl, onLoaded }: { scr
         }
 
         if (mainObj) {
-            mainObj.rotation.y = Math.PI; // Start showing the initial side
+            mainObj.rotation.y = -Math.PI; // Start showing the initial side (match scroll=0 boundary perfectly)
             (app as any)._phoneMasterObj = mainObj;
         }
 

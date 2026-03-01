@@ -42,7 +42,7 @@ export function AboutSection({ onLoaded }: { onLoaded?: () => void }) {
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
 
-            const progress = Math.min(0.5, Math.max(0, scrollY / windowHeight));
+            const progress = Math.min(1, Math.max(0, scrollY / windowHeight));
             setScrollProgress(progress);
         };
 
