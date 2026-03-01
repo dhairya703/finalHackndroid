@@ -109,7 +109,7 @@ export function NavBar({ items, className }: NavBarProps) {
                 "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 mb-6 sm:pt-6",
                 className
             )}
-            style={{ zIndex: 999999 }}
+            style={{ zIndex: 999 }}
         >
             <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
                 {items.map((item) => {
