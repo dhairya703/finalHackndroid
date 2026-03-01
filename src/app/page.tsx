@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { NavBar } from '@/components/nav-bar';
-import { SplashScreen } from '@/components/splash-screen';
+import { NavBar } from '@/components/ui/nav-bar';
+import { SplashScreen } from '@/components/ui/splash-screen';
 
 import { HeroSection } from '@/components/sections/hero/hero-section';
 import { AboutSection } from '@/components/sections/about/about-section';

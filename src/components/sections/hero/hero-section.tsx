@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import dynamic from 'next/dynamic';
-import { ButtonColorful } from '@/components/button-colorful';
+import { ButtonColorful } from '@/components/ui/button-colorful';
 
 const RobotModel = dynamic(() => import('./RobotModel'), {
     ssr: false,
@@ -64,26 +64,26 @@ export function HeroSection({ onSceneReady }: HeroSectionProps) {
                 <div className="marquee-tilted-container">
                     <div className="marquee-band band-purple">
                         <div className="marquee-content" aria-hidden="true">
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
                         </div>
                     </div>
                     <div className="marquee-band band-pink">
                         <div className="marquee-content" aria-hidden="true">
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
-                            <span>HACK-N-DROID '26</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
+                            <span>HACK-N-DROID 2.0</span>
                         </div>
                     </div>
                 </div>

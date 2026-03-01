@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { TubesBackground } from '@/components/ui/neon-flow';
-import { SplashScreen } from '@/components/splash-screen';
+import { SplashScreen } from '@/components/ui/splash-screen';
 
 function getTargetDate(): Date {
     // March 2, 2026 9:00 AM IST (UTC+5:30 = 3:30 AM UTC)
