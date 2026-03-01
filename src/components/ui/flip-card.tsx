@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { ArrowRight, Code2, Copy, Rocket, Zap } from 'lucide-react';
+import { ArrowRight, Code2, Copy, LucideIcon, Rocket, Zap } from 'lucide-react';
 import { useState } from 'react';
 
 export interface CardFlipProps {
@@ -10,6 +10,7 @@ export interface CardFlipProps {
   description?: string;
   features?: string[];
   color?: string;
+  icon?: LucideIcon;
 }
 
 export default function CardFlip({
@@ -22,7 +23,8 @@ export default function CardFlip({
     'MVP Optimized',
     'Zero Setup Required',
   ],
-  color = '#ff2e88'
+  color = '#ff2e88',
+  icon: Icon = Rocket,
 }: CardFlipProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -95,7 +97,7 @@ export default function CardFlip({
                     'transition-all duration-500 group-hover:scale-110 group-hover:rotate-12',
                   )}
                 >
-                  <Rocket className="h-6 w-6 text-white" />
+                  <Icon className="h-6 w-6 text-white" />
                 </div>
               </div>
             </div>
@@ -127,21 +129,20 @@ export default function CardFlip({
         </div>
 
         {/* Back of card */}
-        <div
-          className={cn(
-            'absolute inset-0 h-full w-full',
-            '[transform:rotateY(180deg)] [backface-visibility:hidden]',
-            'rounded-2xl p-5',
-            'bg-white/5 backdrop-blur-md',
-            'border border-white/10',
-            'shadow-xl',
-            'flex flex-col',
-            'transition-all duration-700',
-            'group-hover:shadow-2xl',
-            'group-hover:border-primary/30',
-            !isFlipped ? 'opacity-0' : 'opacity-100',
-          )}
-        >
+{/* Back of card */}
+<div
+  className={cn(
+    'absolute inset-0',
+    '[transform:rotateY(180deg)] [backface-visibility:hidden]',
+    'transition-all duration-700',
+    !isFlipped ? 'opacity-0' : 'opacity-100',
+  )}
+>
+  {/* Gradient Border Wrapper */}
+  <div className="h-full w-full rounded-2xl bg-gradient-to-br from-[#a855f7] to-[#ec4899] p-[1px]">
+    
+    {/* Glass Card */}
+    <div className="h-full w-full rounded-2xl bg-[#0a0a0a] backdrop-blur-md p-5 shadow-xl flex flex-col relative">
           {/* Background gradient */}
           <div className="from-primary/10 absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-primary/5" />
 
@@ -187,7 +188,7 @@ export default function CardFlip({
             </div>
           </div>
 
-          <div className="relative z-10 mt-auto border-t border-white/10 pt-4">
+          {/* <div className="relative z-10 mt-auto border-t border-white/10 pt-4">
             <div
               className={cn(
                 'group/start relative',
@@ -214,8 +215,10 @@ export default function CardFlip({
                 <ArrowRight className="text-primary relative z-10 h-4 w-4 transition-all duration-300 group-hover/start:translate-x-1 group-hover/start:scale-110" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
+      </div>
+      </div>
       </div>
 
       <style jsx>{`

@@ -43,9 +43,9 @@ export function HeroSection({ onSceneReady }: HeroSectionProps) {
                             BIGGER. GRANDER. WILDER.
                         </p>
 
-                        <div className="cta-container" style={{ position: 'relative', zIndex: 20 }}>
+                        {/* <div className="cta-container" style={{ position: 'relative', zIndex: 20 }}>
                             <ButtonColorful label="JOIN THE HACKATHON" />
-                        </div>
+                        </div> */}
 
                         <div style={{ marginTop: '3rem', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 500, letterSpacing: '0.2rem', opacity: 0.6, textTransform: 'uppercase' }}>
                             SCROLL TO EXPLORE
