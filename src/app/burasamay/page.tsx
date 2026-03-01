@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { TubesBackground } from '@/components/ui/neon-flow';
 import { SplashScreen } from '@/components/ui/splash-screen';
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "@/lib/firestore"; 
 
 function getTargetDate(): Date {
     // March 2, 2026 9:00 AM IST (UTC+5:30 = 3:30 AM UTC)
@@ -55,16 +57,67 @@ export default function BuraSamayPage() {
 
     useEffect(() => {
         setMounted(true);
-        const target = getTargetDate().getTime();
 
-        const tick = () => {
-            const distance = target - Date.now();
-            setTime(formatCountdown(distance));
+        const timerRef = doc(db, "config", "timer");
+
+        let interval: NodeJS.Timeout | null = null;
+
+        const unsubscribe = onSnapshot(timerRef, (snapshot) => {
+            if (!snapshot.exists()) return;
+
+            const data = snapshot.data();
+
+            const {
+                duration,
+                isPaused,
+                isRunning,
+                isVisible,
+                remainingSeconds,
+                startTime,
+            } = data;
+
+            // If hidden, clear timer and reset UI
+            if (!isVisible) {
+                setTime({ hours: '--', minutes: '--', seconds: '--' });
+                if (interval) clearInterval(interval);
+                return;
+            }
+
+            // If paused → show remainingSeconds and stop ticking
+            if (isPaused || !isRunning) {
+                if (interval) clearInterval(interval);
+
+                const distance = remainingSeconds * 1000;
+                setTime(formatCountdown(distance));
+                return;
+            }
+
+            // Running state
+            if (interval) clearInterval(interval);
+
+            const startMs = startTime.toDate().getTime();
+            const endTime = startMs + duration * 1000;
+
+            const tick = () => {
+                const distance = endTime - Date.now();
+
+                if (distance <= 0) {
+                    setTime({ hours: '00', minutes: '00', seconds: '00' });
+                    if (interval) clearInterval(interval);
+                    return;
+                }
+
+                setTime(formatCountdown(distance));
+            };
+
+            tick();
+            interval = setInterval(tick, 1000);
+        });
+
+        return () => {
+            if (interval) clearInterval(interval);
+            unsubscribe();
         };
-
-        tick();
-        const interval = setInterval(tick, 1000);
-        return () => clearInterval(interval);
     }, []);
 
     if (!mounted) return null;
