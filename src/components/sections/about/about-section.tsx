@@ -59,9 +59,7 @@ export function AboutSection({ onLoaded }: { onLoaded?: () => void }) {
                         <h2 className="about-title">WHAT IS <br /> HACK-N-DROID?</h2>
                         <div className="about-card">
                             <p className="about-text">
-                                <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>Hack-n-Droid</span> is a dynamic hackathon that brings together developers, ethical hackers, and tech enthusiasts to solve real-world challenges across multiple domains, including EdTech, Law, Healthcare, Public Safety, Sustainability, Modern E-Commerce Solutions, and Open Innovation.
-                                <br /><br />
-                                It fosters creativity, collaboration, and problem-solving, providing a platform for participants to develop cutting-edge solutions that drive meaningful impact in technology and society.
+                                <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>Hack-n-Droid</span> is a 24-hour hackathon uniting developers and enthusiasts to tackle real-world challenges across Healthcare, Fintech, Blockchain, Cybersecurity, AR/VR, and Open Innovation, driving meaningful impact through collaboration and cutting-edge solutions.
                             </p>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { TubesBackground } from '@/components/ui/neon-flow';
 import { SplashScreen } from '@/components/ui/splash-screen';
 import { doc, onSnapshot } from "firebase/firestore";
-import { db } from "@/lib/firestore"; 
+import { db } from "@/lib/firestore";
 
 function getTargetDate(): Date {
     // March 2, 2026 9:00 AM IST (UTC+5:30 = 3:30 AM UTC)
@@ -137,6 +137,31 @@ export default function BuraSamayPage() {
                 <SplashScreen ready={isTubesReady} onFinished={handleSplashFinished} />
             )}
             <TubesBackground className="burasamay-wrapper" onLoaded={handleTubesLoaded}>
+                {/* Partner Logos Bar */}
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: '1.25rem 5%',
+                    zIndex: 100,
+                    background: 'linear-gradient(to bottom, rgba(17,17,17,0.95) 0%, transparent 100%)',
+                    backdropFilter: 'blur(12px)',
+                }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '3rem', justifyContent: 'center' }}>
+                        <img src="/images/vit_logo.jpeg" alt="VIT Logo" style={{ height: 'clamp(50px, 6vh, 65px)', width: 'auto', filter: 'grayscale(1) brightness(2.2) contrast(1.1)', opacity: 0.9 }} />
+                        <img src="/images/swc-logo-white.webp" alt="SWC Logo" style={{ height: 'clamp(80px, 5.5vh, 100px)', width: 'auto', opacity: 0.9 }} />
+                        <img src="/images/android_club_logo.png" alt="Android Club Logo" style={{ height: 'clamp(45px, 6.5vh, 70px)', width: 'auto', filter: 'brightness(1.5)', opacity: 0.9 }} />
+                        <img src="/images/partner-seqato.png" alt="Seqato" style={{ height: 'clamp(60px, 5vh, 80px)', width: 'auto', filter: 'brightness(2)', opacity: 0.8 }} />
+                        <img src="/images/partner-ndmit.png" alt="NDMIT" style={{ height: 'clamp(20px, 4.5vh, 30px)', width: 'auto', filter: 'brightness(2)', opacity: 0.8 }} />
+                        <img src="/images/partner-interviewbuddy-long.png" alt="InterviewBuddy" style={{ height: 'clamp(50px, 5vh, 65px)', width: 'auto', filter: 'brightness(2)', opacity: 0.8 }} />
+                        <img src="/images/partner-xyz.png" alt=".xyz" style={{ height: 'clamp(25px, 4.5vh, 40px)', width: 'auto', filter: 'brightness(2)', opacity: 0.8 }} />
+                    </div>
+                </div>
+
                 <div
                     style={{
                         minHeight: '100vh',
