@@ -43,12 +43,18 @@ export function HeroSection({ onSceneReady }: HeroSectionProps) {
                         <p className="hero-subtitle">
                             BIGGER. GRANDER. WILDER.
                         </p>
-
-                        {/* <div className="cta-container" style={{ position: 'relative', zIndex: 20 }}>
+{/* 
+                        <div className="cta-container mb-4" style={{ position: 'relative', zIndex: 20 }}>
                             <Link href='/leaderboard'>
                                 <ButtonColorful label="VIEW LEADERBOARD" />
                             </Link>
                         </div> */}
+
+                        <div className="cta-container" style={{ position: 'relative', zIndex: 20 }}>
+                            <Link href='/certificate'>
+                                <ButtonColorful label="CERTIFICATES" />
+                            </Link>
+                        </div>
 
                         <div style={{ marginTop: '3rem', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 500, letterSpacing: '0.2rem', opacity: 0.6, textTransform: 'uppercase' }}>
                             SCROLL TO EXPLORE

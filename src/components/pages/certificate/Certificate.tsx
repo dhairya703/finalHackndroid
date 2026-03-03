@@ -79,7 +79,7 @@ const CertificateGenerator = () => {
               fontFamily: '"Bebas Neue", sans-serif',
             }}
           >
-            Certificate
+            Certificates
           </span>
         </div>
 

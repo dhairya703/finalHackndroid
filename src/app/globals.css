@@ -934,7 +934,7 @@ html {
   font-size: clamp(1rem, 2vw, 1.4rem);
   font-weight: 700;
   letter-spacing: 0.3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   color: var(--text-muted);
   text-transform: uppercase;
   background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4));

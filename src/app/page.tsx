@@ -48,6 +48,7 @@ export default function Home() {
     { name: 'TRACKS', url: '#tracks' },
     { name: 'TIMELINE', url: '#timeline' },
     { name: 'FAQ', url: '#faq' },
+    { name: 'CERTIFICATES', url: '/certificate' },
   ];
 
   // Float elements micro-interaction for background
