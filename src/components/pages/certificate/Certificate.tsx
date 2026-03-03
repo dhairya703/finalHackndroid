@@ -1,22 +1,14 @@
 "use client";
-import { useState } from "react";
-
-const teams: Record<string, string[]> = {
-  "-": [
-      "Joelle Mary",
-      "Tijin Renoy"
-  ],
-  "1420": [
-      "Daksh",
-      "Rishab Srivastav ",
-      "Arsh Kalra"
-  ],
-};
+import { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/lib/firestore";
 
 const CertificateGenerator = () => {
   const [selectedTeam, setSelectedTeam] = useState("");
   const [selectedMember, setSelectedMember] = useState("");
   const [certificateUrl, setCertificateUrl] = useState("");
+
+  const [teams, setTeams] = useState<Record<string, string[]>>({});
 
   const handleGenerate = () => {
     if (!selectedTeam || !selectedMember) return;
@@ -24,7 +16,6 @@ const CertificateGenerator = () => {
   };
 
   const generateCertificate = async (name: string) => {
-
     const canvas = document.createElement("canvas");
     canvas.width = 800;
     canvas.height = 600;
@@ -32,11 +23,11 @@ const CertificateGenerator = () => {
     if (!ctx) return;
 
     const backgroundImage = new Image();
-    backgroundImage.src = "/template/certificate-template.jpg";
+    backgroundImage.src = "/template/certificate-template.jpeg";
     backgroundImage.onload = () => {
       ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#82b5c6";
-      ctx.font = "55px 'Poppins', sans-serif";
+      ctx.fillStyle = "#a855f7";
+      ctx.font = "40px 'Poppins', sans-serif";
       const textWidth = ctx.measureText(name).width;
       const x = (canvas.width - textWidth) / 2;
       ctx.fillText(name, x, 353);
@@ -52,16 +43,42 @@ const CertificateGenerator = () => {
     link.click();
   };
 
+  useEffect(() => {
+    const fetchTeams = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "teams"));
+
+        const teamsData: Record<string, string[]> = {};
+
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+
+          if (data.teamName && data.members) {
+            teamsData[data.teamName] = data.members.map((member: any) =>
+              member.name.trim(),
+            );
+          }
+        });
+
+        setTeams(teamsData);
+      } catch (error) {
+        console.error("Error fetching teams:", error);
+      }
+    };
+
+    fetchTeams();
+  }, []);
+
   return (
     <div className="flex w-full min-h-[80vh] flex-wrap items-center justify-center">
       <div className="about-card w-[90vw] md:w-[60vw] py-14 px-24">
         <div className="flex flex-col items-center justify-center gap-2 mb-11 uppercase text-[clamp(2rem,7vw,4rem)]">
-          <span 
+          <span
             className="text-purple-metallic drop-shadow-sm"
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
             }}
-            >
+          >
             Certificate
           </span>
         </div>
@@ -75,7 +92,11 @@ const CertificateGenerator = () => {
               Select Team
             </option>
             {Object.keys(teams).map((team) => (
-              <option key={team} value={team} className="bg-[#0a0a0a] text-white font-bold">
+              <option
+                key={team}
+                value={team}
+                className="bg-[#0a0a0a] text-white font-bold"
+              >
                 {team}
               </option>
             ))}
@@ -86,10 +107,16 @@ const CertificateGenerator = () => {
             onChange={(e) => setSelectedMember(e.target.value)}
             disabled={!selectedTeam}
           >
-            <option value="" className="bg-[#0a0a0a] text-white font-bold">Select Member</option>
+            <option value="" className="bg-[#0a0a0a] text-white font-bold">
+              Select Member
+            </option>
             {selectedTeam &&
               teams[selectedTeam]?.map((member) => (
-                <option key={member} value={member} className="bg-[#0a0a0a] text-white font-bold">
+                <option
+                  key={member}
+                  value={member}
+                  className="bg-[#0a0a0a] text-white font-bold"
+                >
                   {member}
                 </option>
               ))}
@@ -97,7 +124,10 @@ const CertificateGenerator = () => {
 
           <button
             className="w-full p-2 text-[#0a0a0a] rounded disabled:opacity-50"
-            style={{ background: 'linear-gradient(to right, #6366f1aa, #a855f7aa, #ec4899aa)', }}
+            style={{
+              background:
+                "linear-gradient(to right, #6366f1aa, #a855f7aa, #ec4899aa)",
+            }}
             onClick={handleGenerate}
             disabled={!selectedMember}
           >
@@ -106,7 +136,11 @@ const CertificateGenerator = () => {
 
           {certificateUrl && (
             <div className="mt-4">
-              <img src={certificateUrl} alt="Generated Certificate" className="w-full" />
+              <img
+                src={certificateUrl}
+                alt="Generated Certificate"
+                className="w-full"
+              />
               <button
                 className="mt-2 w-full p-2 bg-green-500 text-white rounded"
                 onClick={downloadCertificate}
